@@ -64,7 +64,7 @@ export default function EscrituraPage() {
               >
                 Leer{" "}
                 <span className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
-                  &#8599;
+                  {"\u2197\uFE0E"}
                 </span>
               </Link>
             </div>

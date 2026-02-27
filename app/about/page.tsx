@@ -10,7 +10,7 @@ export const metadata = {
 
 const dataGrid = [
   { label: "Base", value: "Lago de Atitlán, Sololá, Guatemala" },
-  { label: "Formación", value: "Administración Hotelera y Gastronomía — URL Xela" },
+  { label: "Formación", value: "Administración Hotelera y Gastronomía — URL, Quetzaltenango" },
   { label: "Leyendo", value: "Ciencia ficción · Dune, Asimov" },
   { label: "Causas", value: "World Central Kitchen · UNICEF" },
 ];
@@ -102,6 +102,12 @@ const formacion = [
   },
 ];
 
+const idiomas = [
+  { lang: "Español", level: "Nativo" },
+  { lang: "Inglés", level: "Medio-avanzado" },
+  { lang: "Francés", level: "Básico" },
+];
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
@@ -128,7 +134,7 @@ export default function AboutPage() {
             Tengo veinticuatro años y administro un ecosistema de negocios que mi familia empezó a
             construir en 1960, cuando abrimos el primer restaurante a orillas del Lago de Atitlán.
             Desde entonces, tres generaciones han servido comida en Panajachel, San Juan y Santiago.
-            Yo soy la que está intentando llevar eso más lejos — no solo en escala, sino en
+            Yo soy el que está intentando llevar eso más lejos — no solo en escala, sino en
             intención.
           </DropCap>
         </ScrollReveal>
@@ -139,28 +145,34 @@ export default function AboutPage() {
             Quetzaltenango. Ahí encontré la estructura formal para algo que ya sabía hacer por
             instinto: operar cocinas, pensar en servicio, y entender que la hospitalidad es un
             sistema, no un gesto. Después me especialicé en lo que más me interesaba: repostería,
-            pastelería, bollería francesa, y mixología.
+            bollería francesa, masas laminadas, masa madre, y mixología — diseño cartas de cócteles
+            para nuestros restaurantes y para terceros, y creo recetas como &ldquo;Tierra de
+            Humo&rdquo;: mezcal, jamaica, jarabe y tintura de chile cobanero.
           </p>
         </ScrollReveal>
 
         <ScrollReveal>
           <p className="font-body text-lg leading-[1.8] text-ink mt-6">
-            Pero la formación que más me ha marcado no tiene diploma. Soy autodidacta en tecnología,
-            desarrollo web, y ahora en inteligencia artificial. Uso herramientas de IA como copiloto
-            para construir sistemas de automatización, sitios web, y flujos de trabajo que antes
-            habrían requerido equipos enteros. No lo hago por moda — lo hago porque un negocio
-            familiar en Guatemala no tiene el lujo de contratar departamentos de tecnología. Entonces
-            aprendes, o te quedas atrás.
+            Gran parte de mi día la paso en el laboratorio de repostería. Pero la formación que más
+            me ha marcado no tiene diploma. Soy autodidacta en tecnología, desarrollo web, y en
+            inteligencia artificial. Lo digo así: yo soy el arquitecto y la IA son mis albañiles.
+            Diseño la arquitectura de sistemas completos — sitios web, plataformas de gestión,
+            automatización de servicio al cliente — y uso herramientas de IA como copiloto para
+            construirlos. No lo hago por moda — lo hago porque un negocio familiar en Guatemala no
+            tiene el lujo de contratar departamentos de tecnología. Entonces aprendes, o te quedas
+            atrás.
           </p>
         </ScrollReveal>
 
         <ScrollReveal>
           <p className="font-body text-lg leading-[1.8] text-ink mt-6">
-            Hoy dirijo cinco proyectos simultáneos: Restaurantes Atitlán (la operación gastronómica
-            familiar), The Coffee Lab (exploración científica del café guatemalteco), AINUR
-            (producción audiovisual junto a Kris), Pan Nuestro (una panadería artesanal especializada
-            en masas laminadas que estamos desarrollando), y Atitlán Experience (turismo experiencial
-            con modelo B2B y B2C). Todos operan desde el lago. Todos están conectados.
+            Hoy dirijo seis proyectos simultáneos y sirvo como vicepresidente de la Asociación de
+            Restaurantes y Comedores de Panajachel. Tengo sesenta personas en el ecosistema, veinte
+            que reportan directamente a mí, y bajo mi responsabilidad caen todas las cocinas, toda
+            la infraestructura tecnológica, el marketing, y las redes sociales de cada proyecto.
+            También sigo de cerca los mercados financieros globales — desde el S&amp;P 500 hasta el
+            Bovespa, el VIX, y los metales preciosos — porque creo que entender la economía macro
+            es parte de administrar cualquier negocio con visión de largo plazo.
           </p>
         </ScrollReveal>
 
@@ -246,13 +258,56 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Idiomas ── */}
+      <section className="max-w-3xl mx-auto px-5 py-10">
+        <ScrollReveal>
+          <SectionLabel>Idiomas</SectionLabel>
+          <div className="h-[2px] bg-ink mt-4 mb-6" />
+          <div className="flex flex-wrap gap-6">
+            {idiomas.map((item) => (
+              <div key={item.lang}>
+                <p className="font-body text-base font-medium text-ink">{item.lang}</p>
+                <p className="font-mono text-xs text-grey uppercase tracking-wider">{item.level}</p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* ── Cargos institucionales ── */}
+      <section className="max-w-3xl mx-auto px-5 py-8">
+        <ScrollReveal>
+          <SectionLabel>Cargos</SectionLabel>
+          <div className="h-[2px] bg-ink mt-4 mb-6" />
+          <div className="space-y-4">
+            <div className="pl-4 border-l-2 border-ink/10">
+              <p className="font-body text-base font-medium text-ink">Vicepresidente</p>
+              <p className="font-body text-sm text-grey mt-0.5">
+                Asociación de Restaurantes y Comedores de Panajachel
+              </p>
+            </div>
+            <div className="pl-4 border-l-2 border-ink/10">
+              <p className="font-body text-base font-medium text-ink">Miembro del Consejo</p>
+              <p className="font-body text-sm text-grey mt-0.5">
+                Ecosistema de negocios familiar
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
       {/* ── Impacto comunitario (nota sutil) ── */}
       <section className="max-w-3xl mx-auto px-5 py-8">
         <ScrollReveal>
-          <p className="font-mono text-xs text-grey leading-relaxed">
-            Donación de silla de ruedas a la Oficina Municipal de Discapacidad de Panajachel —
-            reconocido por la Municipalidad, febrero 2026.
-          </p>
+          <div className="space-y-1.5">
+            <p className="font-mono text-xs text-grey leading-relaxed">
+              Donación de silla de ruedas a la Oficina Municipal de Discapacidad de Panajachel —
+              reconocido por la Municipalidad, febrero 2026.
+            </p>
+            <p className="font-mono text-xs text-grey leading-relaxed">
+              Donaciones mensuales a World Central Kitchen y UNICEF.
+            </p>
+          </div>
         </ScrollReveal>
       </section>
 
