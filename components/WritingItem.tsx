@@ -17,13 +17,13 @@ export default function WritingItem({ post }: WritingItemProps) {
   return (
     <Link
       href={`/escritura/${post.slug}`}
-      className="group grid grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 items-baseline py-5 border-b border-surface"
+      className="group flex items-baseline gap-6 py-5 border-b border-surface cursor-pointer hover:pl-3 transition-all"
     >
-      <span className="font-mono text-sm text-grey">{post.number}</span>
-      <h3 className="font-serif text-lg font-bold text-ink group-hover:text-red transition-colors leading-tight">
+      <span className="font-mono text-sm text-grey/40 min-w-[2rem]">{post.number}</span>
+      <span className="font-serif text-lg md:text-xl font-medium text-ink group-hover:text-red transition-colors flex-1 leading-tight">
         {post.title}
-      </h3>
-      <span className="font-mono text-xs uppercase tracking-wider text-grey hidden sm:block">
+      </span>
+      <span className="font-mono text-xs text-grey/40 hidden md:block uppercase tracking-wider">
         {post.category}
       </span>
     </Link>

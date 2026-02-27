@@ -63,9 +63,9 @@ export default async function LifestyleArticlePage({ params }: Props) {
         </div>
       )}
 
-      <div className="max-w-3xl mx-auto px-5 py-12">
+      <div className="max-w-3xl mx-auto px-5 py-8 md:py-12">
         {!meta.image && (
-          <header className="mb-12">
+          <header className="mb-8">
             <SectionLabel>{meta.category}</SectionLabel>
             <h1 className="font-serif text-3xl md:text-5xl font-bold text-ink mt-3 mb-4 leading-tight">
               {meta.title}
@@ -83,7 +83,7 @@ export default async function LifestyleArticlePage({ params }: Props) {
         </div>
 
         {/* Footer */}
-        <footer className="border-t border-surface mt-16 pt-8">
+        <footer className="border-t border-surface mt-12 pt-6">
           <Link
             href="/lifestyle"
             className="font-mono text-xs uppercase tracking-wider text-red hover:text-ink transition-colors"

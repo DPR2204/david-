@@ -18,13 +18,14 @@ const dataGrid = [
 export default function AboutPage() {
   return (
     <div className="bg-surface min-h-screen">
-      <div className="max-w-6xl mx-auto px-5 py-12 md:py-20">
-        <div className="grid md:grid-cols-[1fr_1.3fr] gap-12 md:gap-16">
+      <div className="max-w-6xl mx-auto px-5 py-8 md:py-12">
+        <div className="grid md:grid-cols-[1fr_1.3fr] gap-8 md:gap-12">
           {/* Left column */}
           <ScrollReveal>
             <div>
               <SectionLabel>Sobre mí</SectionLabel>
-              <div className="mt-8">
+              <div className="h-[2px] bg-ink mt-4 mb-6" />
+              <div className="mt-6">
                 <blockquote className="font-serif text-2xl md:text-3xl italic text-ink leading-snug">
                   &ldquo;La Tierra no necesita más ciudadanos de naciones. Necesita habitantes
                   conscientes de un planeta.&rdquo;
@@ -33,7 +34,7 @@ export default function AboutPage() {
                   — Manifiesto Terrícola
                 </p>
               </div>
-              <div className="w-[50px] h-[3px] bg-red mt-8" />
+              <div className="w-12 h-[3px] bg-red mt-6" />
             </div>
           </ScrollReveal>
 
@@ -41,7 +42,7 @@ export default function AboutPage() {
           <div>
             <ScrollReveal>
               {/* Bio */}
-              <div className="mb-12">
+              <div className="mb-8">
                 <DropCap>
                   David Rodas tiene 24 años y dirige un ecosistema de proyectos familiares desde las
                   orillas del Lago de Atitlán, Guatemala. Lo que comenzó con un restaurante en
@@ -49,13 +50,13 @@ export default function AboutPage() {
                   café de especialidad, una productora audiovisual y una panadería artesanal en
                   desarrollo.
                 </DropCap>
-                <p className="font-body text-lg leading-[1.8] text-ink mt-6">
+                <p className="font-body text-lg leading-[1.8] text-ink mt-4">
                   Formado en administración hotelera y gastronomía en la Universidad Rafael
                   Landívar, complementó su educación con especialización en mixología y pastelería.
                   Autodidacta en tecnología, desarrollo web e inteligencia artificial, aplica una
                   filosofía de optimización constante a cada proyecto.
                 </p>
-                <p className="font-body text-lg leading-[1.8] text-ink mt-6">
+                <p className="font-body text-lg leading-[1.8] text-ink mt-4">
                   Actualmente escribe el Manifiesto Terrícola — una obra sobre identidad planetaria
                   y ética post-teológica. Cree que la responsabilidad no es un deber impuesto, sino
                   una consecuencia natural de la conciencia. Lee ciencia ficción — Dune y Asimov —
@@ -66,7 +67,7 @@ export default function AboutPage() {
 
             {/* Data grid */}
             <ScrollReveal>
-              <div className="grid grid-cols-2 gap-6 mb-12 py-8 border-t border-b border-paper">
+              <div className="grid grid-cols-2 gap-6 mb-8 py-6 border-t border-b border-ink/10">
                 {dataGrid.map((item) => (
                   <div key={item.label}>
                     <p className="font-mono text-xs uppercase tracking-wider text-grey mb-1">
