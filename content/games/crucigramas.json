@@ -1,0 +1,66 @@
+[
+  {
+    "id": "semana-1",
+    "size": 10,
+    "words": [
+      { "word": "ATITLAN", "row": 0, "col": 1, "direction": "across", "number": 1, "clue": "El lago más profundo de Centroamérica" },
+      { "word": "CAFE", "row": 2, "col": 0, "direction": "across", "number": 3, "clue": "Grano de oro de Sololá" },
+      { "word": "VOLCAN", "row": 4, "col": 2, "direction": "across", "number": 5, "clue": "Formación geológica que rodea el lago" },
+      { "word": "PAN", "row": 6, "col": 3, "direction": "across", "number": 7, "clue": "Producto de harina horneado" },
+      { "word": "MASA", "row": 8, "col": 0, "direction": "across", "number": 9, "clue": "Base del torteo y la panadería" },
+      { "word": "AGUA", "row": 0, "col": 1, "direction": "down", "number": 1, "clue": "Recurso vital del lago" },
+      { "word": "CACAO", "row": 0, "col": 5, "direction": "down", "number": 2, "clue": "Fruto mesoamericano para chocolate" },
+      { "word": "FUEGO", "row": 2, "col": 3, "direction": "down", "number": 4, "clue": "Uno de los tres volcanes del lago" },
+      { "word": "LECHE", "row": 4, "col": 7, "direction": "down", "number": 6, "clue": "Ingrediente esencial de la repostería" },
+      { "word": "MAIZ", "row": 5, "col": 0, "direction": "down", "number": 8, "clue": "El grano sagrado maya" }
+    ]
+  },
+  {
+    "id": "semana-2",
+    "size": 10,
+    "words": [
+      { "word": "MEZCAL", "row": 0, "col": 0, "direction": "across", "number": 1, "clue": "Espíritu destilado del agave" },
+      { "word": "LAGO", "row": 2, "col": 3, "direction": "across", "number": 3, "clue": "Cuerpo de agua donde vive David" },
+      { "word": "HORNO", "row": 4, "col": 1, "direction": "across", "number": 5, "clue": "Donde se cuece el pan" },
+      { "word": "TRIGO", "row": 6, "col": 2, "direction": "across", "number": 7, "clue": "Cereal para harina de panadería" },
+      { "word": "SALSA", "row": 8, "col": 0, "direction": "across", "number": 9, "clue": "Acompañamiento líquido para platos" },
+      { "word": "MILPA", "row": 0, "col": 0, "direction": "down", "number": 1, "clue": "Sistema agrícola ancestral maya" },
+      { "word": "CREMA", "row": 0, "col": 4, "direction": "down", "number": 2, "clue": "Lácteo batido para postres" },
+      { "word": "ATOLE", "row": 2, "col": 3, "direction": "down", "number": 4, "clue": "Bebida caliente de maíz" },
+      { "word": "GRANO", "row": 4, "col": 6, "direction": "down", "number": 6, "clue": "Semilla de café antes de tostar" },
+      { "word": "DULCE", "row": 5, "col": 2, "direction": "down", "number": 8, "clue": "Sabor de la panela y el cacao" }
+    ]
+  },
+  {
+    "id": "semana-3",
+    "size": 10,
+    "words": [
+      { "word": "PEPIAN", "row": 0, "col": 1, "direction": "across", "number": 1, "clue": "Recado tradicional guatemalteco" },
+      { "word": "CHILE", "row": 2, "col": 0, "direction": "across", "number": 3, "clue": "Fruto picante esencial en la cocina" },
+      { "word": "VAPOR", "row": 4, "col": 2, "direction": "across", "number": 5, "clue": "Lo que sale del café caliente" },
+      { "word": "ADOBE", "row": 6, "col": 0, "direction": "across", "number": 7, "clue": "Material de construcción ancestral" },
+      { "word": "TAMÁL", "row": 8, "col": 1, "direction": "across", "number": 9, "clue": "Alimento envuelto en hoja" },
+      { "word": "PILAR", "row": 0, "col": 1, "direction": "down", "number": 1, "clue": "Columna que sostiene una estructura" },
+      { "word": "PLATO", "row": 0, "col": 5, "direction": "down", "number": 2, "clue": "Donde se sirve la comida" },
+      { "word": "COMAL", "row": 2, "col": 0, "direction": "down", "number": 4, "clue": "Plancha para tortear" },
+      { "word": "AROMA", "row": 4, "col": 7, "direction": "down", "number": 6, "clue": "Lo que libera el café recién molido" },
+      { "word": "VELAS", "row": 5, "col": 3, "direction": "down", "number": 8, "clue": "Iluminación de las procesiones" }
+    ]
+  },
+  {
+    "id": "semana-4",
+    "size": 10,
+    "words": [
+      { "word": "SOLOLA", "row": 0, "col": 0, "direction": "across", "number": 1, "clue": "Departamento donde está el Lago de Atitlán" },
+      { "word": "KAYAK", "row": 2, "col": 2, "direction": "across", "number": 3, "clue": "Embarcación para navegar el lago" },
+      { "word": "CARNE", "row": 4, "col": 1, "direction": "across", "number": 5, "clue": "Proteína en el plato principal" },
+      { "word": "FINCA", "row": 6, "col": 0, "direction": "across", "number": 7, "clue": "Terreno agrícola de café" },
+      { "word": "HIELO", "row": 8, "col": 2, "direction": "across", "number": 9, "clue": "Agua solidificada para cócteles" },
+      { "word": "SAZÓN", "row": 0, "col": 0, "direction": "down", "number": 1, "clue": "El toque especial del cocinero" },
+      { "word": "LANCH", "row": 0, "col": 4, "direction": "down", "number": 2, "clue": "Bote que cruza el lago (abreviado)" },
+      { "word": "CAMPO", "row": 2, "col": 2, "direction": "down", "number": 4, "clue": "Área rural de cultivo" },
+      { "word": "NUBES", "row": 4, "col": 6, "direction": "down", "number": 6, "clue": "Cubren los volcanes por la tarde" },
+      { "word": "FUEGO", "row": 4, "col": 1, "direction": "down", "number": 8, "clue": "Volcán y elemento de la cocina" }
+    ]
+  }
+]

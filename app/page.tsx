@@ -2,6 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
+import ElMixCarousel from "@/components/ElMixCarousel";
+import EditorialSeparator from "@/components/EditorialSeparator";
+import QueEstoyLeyendo from "@/components/QueEstoyLeyendo";
+import PuzzlesJuegos from "@/components/PuzzlesJuegos";
 import { ventures } from "@/lib/ventures";
 import { getAllPosts } from "@/lib/mdx";
 import { placeholderImages } from "@/lib/cloudinary";
@@ -64,7 +68,10 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Block 3: Ventures visual cards */}
+      {/* Block 3: Carrusel "El Mix" */}
+      <ElMixCarousel />
+
+      {/* Block 4: Ventures visual cards */}
       <section className="px-6 md:px-12 py-16 bg-paper">
         <ScrollReveal>
           {/* Section header */}
@@ -124,7 +131,10 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Block 4: Intermediate hero photo */}
+      {/* Block 5: Ilustración editorial — lago/volcanes */}
+      <EditorialSeparator illustration="/illustrations/lake-scene.svg" />
+
+      {/* Block 6: Intermediate hero photo */}
       <section className="relative w-full aspect-[21/9] md:aspect-[3/1] overflow-hidden">
         <Image
           src={placeholderImages.kitchen}
@@ -141,7 +151,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Block 5: Bloque "Ahora" */}
+      {/* Block 7: Qué estoy leyendo */}
+      <QueEstoyLeyendo />
+
+      {/* Block 8: Ilustración editorial — lectura/escritura */}
+      <EditorialSeparator illustration="/illustrations/reading-scene.svg" />
+
+      {/* Block 9: Bloque "Ahora" */}
       <section className="py-16 px-6 md:px-12 bg-surface">
         <ScrollReveal>
           <div className="max-w-4xl mx-auto">
@@ -182,7 +198,13 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Block 6: Latest article — Manifiesto teaser */}
+      {/* Block 10: Puzzles & Juegos */}
+      <PuzzlesJuegos />
+
+      {/* Block 11: Ilustración editorial — juegos/puzzle */}
+      <EditorialSeparator illustration="/illustrations/games-scene.svg" />
+
+      {/* Block 12: Latest article — Manifiesto teaser */}
       {featuredPost && (
         <section className="py-16 px-6 md:px-12 bg-paper">
           <ScrollReveal>

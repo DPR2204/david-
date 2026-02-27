@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Open book -->
+  <path d="M220 140 Q300 120 380 140" />
+  <path d="M220 140 L220 80 Q300 60 300 100" />
+  <path d="M380 140 L380 80 Q300 60 300 100" />
+  <!-- Pages (left) -->
+  <line x1="235" y1="90" x2="290" y2="82" stroke-width="0.8" opacity="0.3" />
+  <line x1="235" y1="100" x2="290" y2="90" stroke-width="0.8" opacity="0.3" />
+  <line x1="235" y1="110" x2="290" y2="98" stroke-width="0.8" opacity="0.3" />
+  <line x1="235" y1="120" x2="285" y2="108" stroke-width="0.8" opacity="0.3" />
+  <!-- Pages (right) -->
+  <line x1="310" y1="82" x2="365" y2="90" stroke-width="0.8" opacity="0.3" />
+  <line x1="310" y1="90" x2="365" y2="100" stroke-width="0.8" opacity="0.3" />
+  <line x1="310" y1="98" x2="365" y2="110" stroke-width="0.8" opacity="0.3" />
+  <line x1="315" y1="108" x2="365" y2="120" stroke-width="0.8" opacity="0.3" />
+  <!-- Coffee cup -->
+  <path d="M430 115 L430 140 Q430 155 445 155 L465 155 Q480 155 480 140 L480 115" />
+  <path d="M425 115 L485 115" stroke-width="2" />
+  <path d="M480 125 Q500 125 500 138 Q500 150 480 148" stroke-width="1" />
+  <!-- Steam from coffee -->
+  <path d="M445 105 Q440 95 445 85" stroke-width="1" opacity="0.3" />
+  <path d="M460 108 Q465 98 460 88" stroke-width="1" opacity="0.3" />
+  <!-- Pen -->
+  <line x1="140" y1="155" x2="190" y2="105" stroke-width="1.5" />
+  <path d="M190 105 L195 100 L188 103 Z" fill="#1A1A1A" />
+  <!-- Ink dots (writing traces) -->
+  <circle cx="160" cy="145" r="1" fill="#1A1A1A" opacity="0.2" />
+  <circle cx="152" cy="150" r="0.8" fill="#1A1A1A" opacity="0.2" />
+  <!-- Small plant -->
+  <line x1="120" y1="155" x2="120" y2="130" stroke-width="1" />
+  <path d="M120 130 Q110 120 115 110" stroke-width="1" />
+  <path d="M120 135 Q130 125 128 115" stroke-width="1" />
+  <path d="M120 140 Q108 132 112 122" stroke-width="1" />
+  <!-- Table line -->
+  <line x1="100" y1="155" x2="500" y2="155" stroke-width="1" opacity="0.3" />
+</svg>
