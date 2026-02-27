@@ -11,15 +11,15 @@ export default function EditorialSeparator({ illustration, alt = "", className =
   const [hasImage, setHasImage] = useState(true);
 
   return (
-    <section className={`py-10 md:py-14 flex flex-col items-center justify-center ${className}`}>
+    <section className={`py-12 md:py-16 flex flex-col items-center justify-center ${className}`}>
       <div className="w-full max-w-lg px-6">
-        <div className="h-px bg-grey/20 mb-8" />
+        <div className="h-px bg-grey/20 mb-10" />
         {hasImage ? (
           <div className="flex justify-center">
             <img
               src={illustration}
               alt={alt}
-              className="h-24 md:h-32 w-auto illustration-vineta"
+              className="h-32 md:h-44 w-auto illustration-vineta"
               aria-hidden="true"
               onError={() => setHasImage(false)}
             />
@@ -29,7 +29,7 @@ export default function EditorialSeparator({ illustration, alt = "", className =
             <span className="text-grey/30 text-lg">&#9670;</span>
           </div>
         )}
-        <div className="h-px bg-grey/20 mt-8" />
+        <div className="h-px bg-grey/20 mt-10" />
       </div>
     </section>
   );

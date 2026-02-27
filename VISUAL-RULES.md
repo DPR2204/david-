@@ -19,7 +19,7 @@ El tono visual es:
   sin bordes redondeados grandes. Todo es plano, limpio, serio pero con humor sutil.
 
 ## Principio general
-El sitio se ve como: fotografía real + tipografía + espacios oscuros minimalistas.
+El sitio se ve como: fotografía (real o stock editorial) + tipografía + ilustraciones Transhumans como viñetas.
 NO se mezclan ilustraciones cartoon con fotografía. Nunca.
 
 ## Principio de consistencia por sección
@@ -29,9 +29,10 @@ Cada sección o grupo de componentes debe ser visualmente homogéneo:
 - NUNCA mezclar fotos reales con ilustraciones en el mismo contexto visual (mismo grid, mismo carrusel, misma sección)
 
 ## Jerarquía de assets visuales para cards y contenido
-1. **Fotografía real** — Preferida para ventures, carousel, contenido visual
-2. **Ilustración Transhumans** — Válida como alternativa completa para una sección
-3. **Placeholder oscuro minimalista** — Cuando no hay ni foto ni ilustración. Fondo `bg-ink` con punto sutil.
+1. **Fotografía real propia** — Siempre preferida
+2. **Fotografía de stock editorial** — Permitida cuando no hay foto propia. Requisitos: luz natural, sin poses, estética documental. Fuente: Unsplash (`images.unsplash.com`).
+3. **Ilustración Transhumans** — Para separadores y secciones editoriales
+4. **Placeholder tipográfico** — Último recurso, debe verse intencional (no como imagen rota)
 
 ## Ilustraciones: dónde sí y dónde no
 

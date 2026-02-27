@@ -135,5 +135,5 @@ body {
 /* Transhumans editorial viñeta — invert white-on-transparent to dark ink on paper */
 .illustration-vineta {
   filter: invert(1);
-  opacity: 0.85;
+  opacity: 0.9;
 }

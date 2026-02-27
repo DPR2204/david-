@@ -21,7 +21,7 @@ const mixItems: MixItem[] = [
   },
   {
     href: "/ventures/pan-nuestro",
-    image: null,
+    image: "https://images.unsplash.com/photo-1668446377138-c763c16e99f0?w=800&q=80",
     tag: "Panadería",
     title: "Masas laminadas en Atitlán",
     excerpt: "El proceso detrás de Pan Nuestro: croissants de mantequilla, fermentación lenta y el clima del lago.",
@@ -35,21 +35,21 @@ const mixItems: MixItem[] = [
   },
   {
     href: "/lifestyle/el-ritual-del-cafe",
-    image: null,
+    image: "https://images.unsplash.com/photo-1561986845-fbeb7f7913d8?w=800&q=80",
     tag: "Café",
     title: "Café de altura",
     excerpt: "Notas de cata del mejor grano de Sololá. Del cultivo a la taza, un viaje sensorial.",
   },
   {
     href: "/ventures/ainur",
-    image: null,
+    image: "https://images.unsplash.com/photo-1497015289639-54688650d173?w=800&q=80",
     tag: "Audiovisual",
     title: "Narrativas del lago",
     excerpt: "Últimas producciones de AINUR: documentales, cortometrajes y contenido visual desde Atitlán.",
   },
   {
     href: "/ventures/atitlan-experience",
-    image: null,
+    image: "https://images.unsplash.com/photo-1660670172925-09d60dcdd949?w=800&q=80",
     tag: "Turismo",
     title: "El futuro del turismo en Atitlán",
     excerpt: "Modelo B2B/B2C para un turismo responsable que beneficia a las comunidades locales.",

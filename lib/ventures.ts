@@ -35,6 +35,7 @@ export const ventures: Venture[] = [
     tag: "Café",
     type: "Emprendimiento familiar",
     url: "https://thecoffeelab.top",
+    image: "https://images.unsplash.com/photo-1761393877623-4412d7060ba4?w=800&q=80",
   },
   {
     name: "AINUR",
@@ -46,6 +47,7 @@ export const ventures: Venture[] = [
     tag: "Audiovisual",
     type: "Proyecto conjunto con Kris",
     url: "https://ainur.cam",
+    image: "https://images.unsplash.com/photo-1543242792-e06503878126?w=800&q=80",
   },
   {
     name: "Pan Nuestro",
@@ -56,6 +58,7 @@ export const ventures: Venture[] = [
       "Panadería artesanal especializada en masas laminadas. Croissants, danishes y pan de masa madre desde Atitlán.",
     tag: "Panadería",
     type: "Emprendimiento propio",
+    image: "https://images.unsplash.com/photo-1691862469586-9c7c183b27b7?w=800&q=80",
   },
   {
     name: "Atitlán Experience",
@@ -67,6 +70,7 @@ export const ventures: Venture[] = [
     tag: "Turismo",
     type: "Empresa familiar",
     url: "https://atitlanexperience.com",
+    image: "https://images.unsplash.com/photo-1513873735612-3f2a20b4753e?w=800&q=80",
   },
   {
     name: "Habitación",
