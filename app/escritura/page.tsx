@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
-import WritingItem from "@/components/WritingItem";
 import { getAllPosts } from "@/lib/mdx";
 
 export const metadata = {
@@ -16,35 +16,30 @@ export default function EscrituraPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-5 py-8 md:py-12">
-      {/* Featured piece — Manifiesto Terrícola */}
+      {/* Featured piece */}
       {featured && (
         <ScrollReveal>
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 pb-10 border-b border-surface">
-            {/* Visual poster */}
-            <div className="relative aspect-[4/5] md:aspect-[4/3] bg-ink rounded-sm overflow-hidden flex items-center justify-center">
-              {/* Scanline texture */}
-              <div
-                className="absolute inset-0 pointer-events-none opacity-[0.03]"
-                style={{
-                  backgroundImage:
-                    "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 4px)",
-                }}
-              />
-              {/* Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
-              {/* Content */}
-              <div className="relative text-center px-8">
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-red mb-4">
-                  {featured.category}
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-paper leading-tight">
-                  Manifiesto<br />Terrícola
-                </h2>
-                <div className="w-12 h-[3px] bg-red mx-auto mt-6" />
+            <Link href={`/escritura/${featured.slug}`} className="group">
+              <div className="relative aspect-[4/5] md:aspect-[4/3] rounded-sm overflow-hidden">
+                {featured.image ? (
+                  <Image
+                    src={featured.image}
+                    alt={featured.title}
+                    fill
+                    className="object-cover transition-opacity group-hover:opacity-90"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-ink flex items-center justify-center">
+                    <h2 className="font-serif text-3xl font-bold text-paper text-center px-8">
+                      {featured.title}
+                    </h2>
+                  </div>
+                )}
               </div>
-            </div>
+            </Link>
 
-            {/* Content */}
             <div className="flex flex-col justify-center">
               <SectionLabel>{featured.status || "Obra en progreso"}</SectionLabel>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-ink mt-3 mb-3 leading-tight">
@@ -64,7 +59,7 @@ export default function EscrituraPage() {
               >
                 Leer{" "}
                 <span className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
-                  {"\u2197\uFE0E"}
+                  ↗
                 </span>
               </Link>
             </div>
@@ -72,7 +67,7 @@ export default function EscrituraPage() {
         </ScrollReveal>
       )}
 
-      {/* Essay list */}
+      {/* Essay list with thumbnails */}
       <div className="mt-8">
         <ScrollReveal>
           <SectionLabel>Ensayos</SectionLabel>
@@ -81,16 +76,38 @@ export default function EscrituraPage() {
 
         {rest.map((post, i) => (
           <ScrollReveal key={post.slug}>
-            <WritingItem
-              post={{
-                slug: post.slug,
-                number: String(i + 1).padStart(2, "0"),
-                title: post.title,
-                category: post.category,
-                date: post.date,
-                excerpt: post.excerpt,
-              }}
-            />
+            <Link
+              href={`/escritura/${post.slug}`}
+              className="group flex items-center gap-5 py-5 border-b border-surface hover:pl-2 transition-all"
+            >
+              {post.image && (
+                <div className="relative w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-sm overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
+                </div>
+              )}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-mono text-sm text-grey/40">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="font-serif text-lg md:text-xl font-medium text-ink group-hover:text-red transition-colors leading-tight truncate">
+                    {post.title}
+                  </h3>
+                </div>
+                <p className="font-body text-sm text-grey mt-1 line-clamp-1 hidden md:block">
+                  {post.excerpt}
+                </p>
+              </div>
+              <span className="font-mono text-xs text-grey/40 hidden md:block uppercase tracking-wider shrink-0">
+                {post.category}
+              </span>
+            </Link>
           </ScrollReveal>
         ))}
       </div>

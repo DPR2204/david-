@@ -156,6 +156,27 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
               {[
                 {
+                  slug: "manifiesto-terricola",
+                  category: "FILOSOFÍA",
+                  title: "Manifiesto Terrícola",
+                  excerpt: "La Tierra no necesita más ciudadanos de naciones. Necesita habitantes conscientes de un planeta.",
+                  image: "/images/blog/manifiesto-terricola.png",
+                },
+                {
+                  slug: "responsabilidad-planetaria",
+                  category: "FILOSOFÍA",
+                  title: "Responsabilidad planetaria: por qué donar no es caridad",
+                  excerpt: "Una reflexión sobre la diferencia entre caridad y responsabilidad en un mundo interconectado.",
+                  image: "/images/blog/responsabilidad-planetaria.png",
+                },
+                {
+                  slug: "del-grano-a-la-taza",
+                  category: "TÉCNICO",
+                  title: "Del grano a la taza: variables que importan",
+                  excerpt: "Las variables que transforman un café ordinario en una experiencia sensorial.",
+                  image: "/images/blog/del-grano-a-la-taza.png",
+                },
+                {
                   slug: "sesenta-anos-sirviendo-al-lago",
                   category: "NARRATIVA",
                   title: "Sesenta años sirviendo al lago",
@@ -170,11 +191,11 @@ export default function HomePage() {
                   image: "/images/blog/autodidactas-era-ia.png",
                 },
                 {
-                  slug: "manifiesto-terricola",
+                  slug: "optimizacion-filosofia-de-vida",
                   category: "FILOSOFÍA",
-                  title: "Manifiesto Terrícola",
-                  excerpt: "La Tierra no necesita más ciudadanos de naciones. Necesita habitantes conscientes de un planeta.",
-                  image: "/images/blog/manifiesto-terricola.png",
+                  title: "La optimización como filosofía de vida",
+                  excerpt: "Tratar cada sistema como un problema de ingeniería con solución elegante.",
+                  image: "/images/blog/optimizacion-filosofia-de-vida.png",
                 },
               ].map((post) => (
                 <Link key={post.slug} href={`/escritura/${post.slug}`} className="group block">
