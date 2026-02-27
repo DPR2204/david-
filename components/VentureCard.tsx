@@ -1,11 +1,5 @@
-export interface Venture {
-  name: string;
-  year: string;
-  status: string;
-  description: string;
-  tag: string;
-  href?: string;
-}
+import Link from "next/link";
+import type { Venture } from "@/lib/ventures";
 
 interface VentureCardProps {
   venture: Venture;
@@ -14,8 +8,9 @@ interface VentureCardProps {
 
 export default function VentureCard({ venture, index }: VentureCardProps) {
   return (
-    <div
-      className={`group py-8 pr-8 border-b border-surface hover:bg-ink/[0.02] transition-colors cursor-pointer ${
+    <Link
+      href={`/ventures/${venture.slug}`}
+      className={`group block py-8 pr-8 border-b border-surface hover:bg-ink/[0.02] transition-colors ${
         index % 2 === 1 ? "md:pl-8 md:border-l md:border-surface" : ""
       }`}
     >
@@ -27,8 +22,8 @@ export default function VentureCard({ venture, index }: VentureCardProps) {
       </div>
       <h3 className="font-serif text-xl md:text-2xl font-bold flex items-center gap-2 mb-2">
         <span className="text-ink group-hover:text-red transition-colors">{venture.name}</span>
-        <span className="text-base text-grey/40 group-hover:text-red group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
-          &#8599;
+        <span className="text-base text-grey/40 group-hover:text-red group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
+          {"\u2197\uFE0E"}
         </span>
       </h3>
       <p className="font-body text-sm md:text-base text-grey leading-relaxed max-w-md">
@@ -39,6 +34,6 @@ export default function VentureCard({ venture, index }: VentureCardProps) {
           {venture.status}
         </p>
       )}
-    </div>
+    </Link>
   );
 }
