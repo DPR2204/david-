@@ -8,6 +8,8 @@ export const cloudinaryConfig = {
 // Placeholder images using unsplash for development
 export const placeholderImages = {
   lake: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200&h=800&fit=crop",
+  heroLake: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1920&h=1080&fit=crop",
+  kitchen: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1920&h=640&fit=crop",
   restaurant: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
   coffee: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop",
   bread: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=600&fit=crop",
@@ -19,4 +21,5 @@ export const placeholderImages = {
   market: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop",
   village: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=800&h=600&fit=crop",
   writing: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=600&fit=crop",
+  community: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop",
 };
