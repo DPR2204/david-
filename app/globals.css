@@ -18,6 +18,22 @@ body {
   font-family: var(--font-body);
 }
 
+/* Dateline fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out 0.5s both;
+}
+
 /* Drop cap styling */
 .drop-cap::first-letter {
   font-family: 'Playfair Display', serif;
