@@ -7,13 +7,9 @@ import EditorialSeparator from "@/components/EditorialSeparator";
 import QueEstoyLeyendo from "@/components/QueEstoyLeyendo";
 import PuzzlesJuegos from "@/components/PuzzlesJuegos";
 import { ventures } from "@/lib/ventures";
-import { getAllPosts } from "@/lib/mdx";
 import { siteImages } from "@/lib/cloudinary";
 
 export default function HomePage() {
-  const escrituraPosts = getAllPosts("escritura");
-  const featuredPost = escrituraPosts.find((p) => p.featured) || escrituraPosts[0];
-
   return (
     <div>
       {/* Block 1: Hero with real photo */}
@@ -146,7 +142,77 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Block 7: Qué estoy leyendo */}
+      {/* Block 7: Escritura — New Yorker-style grid */}
+      <section className="py-16 md:py-24 px-6 bg-paper">
+        <ScrollReveal>
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-center mb-4 text-ink">
+              Escritura
+            </h2>
+            <p className="text-center text-grey text-sm mb-12">
+              Ensayos, ideas y exploraciones
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+              {[
+                {
+                  slug: "sesenta-anos-sirviendo-al-lago",
+                  category: "NARRATIVA",
+                  title: "Sesenta años sirviendo al lago",
+                  excerpt: "Una historia familiar que empieza en 1960 y sigue viva en tres locaciones alrededor del Lago de Atitlán.",
+                  image: "/images/blog/sesenta-anos-sirviendo-al-lago.png",
+                },
+                {
+                  slug: "autodidactas-era-ia",
+                  category: "TÉCNICO",
+                  title: "Autodidactas en la era de la inteligencia artificial",
+                  excerpt: "Aprender sin institución en un mundo donde la IA democratiza el conocimiento.",
+                  image: "/images/blog/autodidactas-era-ia.png",
+                },
+                {
+                  slug: "manifiesto-terricola",
+                  category: "FILOSOFÍA",
+                  title: "Manifiesto Terrícola",
+                  excerpt: "La Tierra no necesita más ciudadanos de naciones. Necesita habitantes conscientes de un planeta.",
+                  image: "/images/blog/manifiesto-terricola.png",
+                },
+              ].map((post) => (
+                <Link key={post.slug} href={`/escritura/${post.slug}`} className="group block">
+                  <div className="relative aspect-square overflow-hidden rounded-sm mb-4">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-opacity group-hover:opacity-90"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <span className="font-mono text-[0.55rem] uppercase tracking-widest text-red">
+                    {post.category}
+                  </span>
+                  <h3 className="font-serif text-xl font-bold text-ink mt-1 mb-2 group-hover:text-red transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="font-body text-sm text-grey leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                </Link>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/escritura"
+                className="font-mono text-xs uppercase tracking-widest text-ink hover:text-red transition-colors"
+              >
+                Ver todos los escritos →
+              </Link>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Block 8: Qué estoy leyendo */}
       <QueEstoyLeyendo />
 
       {/* Block 8: Viñeta editorial — Transhumans Coffee */}
@@ -198,63 +264,6 @@ export default function HomePage() {
 
       {/* Block 11: Viñeta editorial — Transhumans Entertainment */}
       <EditorialSeparator illustration="/illustrations/transhumans-entertainment.svg" />
-
-      {/* Block 12: Latest article — Manifiesto teaser */}
-      {featuredPost && (
-        <section className="py-16 px-6 md:px-12 bg-paper">
-          <ScrollReveal>
-            <div className="max-w-6xl mx-auto">
-              <SectionLabel>Escritura</SectionLabel>
-              <div className="h-[2px] bg-ink mt-4 mb-10" />
-
-              <Link href={`/escritura/${featuredPost.slug}`} className="group block">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                  <div className="relative aspect-[4/5] bg-ink rounded-sm overflow-hidden">
-                    <div
-                      className="absolute inset-0 pointer-events-none opacity-[0.03]"
-                      style={{
-                        backgroundImage:
-                          "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 4px)",
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
-                    <div className="relative h-full flex flex-col items-center justify-center px-8">
-                      <span className="font-mono text-xs uppercase tracking-[0.2em] text-red mb-4">
-                        {featuredPost.category}
-                      </span>
-                      <h3 className="font-serif text-4xl md:text-5xl font-bold text-paper text-center leading-tight">
-                        Manifiesto<br />Terrícola
-                      </h3>
-                      <div className="w-12 h-[3px] bg-red mt-6" />
-                    </div>
-                  </div>
-
-                  <div>
-                    <span className="font-mono text-xs uppercase tracking-[0.2em] text-red mb-3 block">
-                      {featuredPost.status || "Obra en progreso"}
-                    </span>
-                    <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4 group-hover:text-red transition-colors">
-                      {featuredPost.title}
-                    </h3>
-                    <p className="font-body text-base text-grey leading-relaxed mb-4">
-                      {featuredPost.excerpt}
-                    </p>
-                    <span className="font-mono text-xs text-grey mb-6 block">
-                      {featuredPost.category} &middot; {featuredPost.date}
-                    </span>
-                    <span className="font-mono text-xs uppercase tracking-wider text-red group-hover:text-ink transition-colors inline-flex items-center gap-1">
-                      Leer{" "}
-                      <span className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
-                        ↗
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </ScrollReveal>
-        </section>
-      )}
     </div>
   );
 }
