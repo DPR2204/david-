@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #F5F0E8;
+  --color-surface: #EBE5DA;
+  --color-ink: #1A1A1A;
+  --color-red: #C53A2A;
+  --color-grey: #8A8578;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+/* Drop cap styling */
+.drop-cap::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  float: left;
+  line-height: 0.8;
+  padding-right: 0.5rem;
+  padding-top: 0.15rem;
+  font-weight: 700;
+  color: #C53A2A;
+}
+
+/* Hide scrollbar for nav tabs */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* MDX prose styling */
+.prose h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-ink);
+}
+
+.prose h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-ink);
+}
+
+.prose p {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  color: var(--color-ink);
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--color-red);
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--color-grey);
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose a {
+  color: var(--color-red);
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: var(--color-ink);
+}
