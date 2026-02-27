@@ -3,7 +3,7 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import ElMixCarousel from "@/components/ElMixCarousel";
-import EditorialSeparator from "@/components/EditorialSeparator";
+import SectionDivider from "@/components/SectionDivider";
 import QueEstoyLeyendo from "@/components/QueEstoyLeyendo";
 import PuzzlesJuegos from "@/components/PuzzlesJuegos";
 import { ventures } from "@/lib/ventures";
@@ -123,8 +123,12 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Block 5: Viñeta editorial — Transhumans Growth */}
-      <EditorialSeparator illustration="/illustrations/transhumans-growth.svg" />
+      {/* Block 5: Section divider — Escritura */}
+      <SectionDivider
+        image="/illustrations/divider-escritura.png"
+        title="Escritura"
+        subtitle="Ensayos, ideas y exploraciones"
+      />
 
       {/* Block 6: Intermediate hero photo — David y Rafa cocinando */}
       <section className="relative w-full overflow-hidden" style={{ aspectRatio: '21/9' }}>
@@ -146,13 +150,6 @@ export default function HomePage() {
       <section className="py-16 md:py-24 px-6 bg-paper">
         <ScrollReveal>
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl text-center mb-4 text-ink">
-              Escritura
-            </h2>
-            <p className="text-center text-grey text-sm mb-12">
-              Ensayos, ideas y exploraciones
-            </p>
-
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10">
               {[
                 {
@@ -236,8 +233,12 @@ export default function HomePage() {
       {/* Block 8: Qué estoy leyendo */}
       <QueEstoyLeyendo />
 
-      {/* Block 8: Viñeta editorial — Transhumans Coffee */}
-      <EditorialSeparator illustration="/illustrations/transhumans-coffee.svg" />
+      {/* Block 8: Section divider — Qué estoy leyendo */}
+      <SectionDivider
+        image="/illustrations/divider-libros.png"
+        title="Qué estoy leyendo"
+        subtitle="Libros, artículos e ideas en mi radar"
+      />
 
       {/* Block 9: Bloque "Ahora" */}
       <section className="py-16 px-6 md:px-12 bg-surface">
@@ -283,8 +284,12 @@ export default function HomePage() {
       {/* Block 10: Puzzles & Juegos */}
       <PuzzlesJuegos />
 
-      {/* Block 11: Viñeta editorial — Transhumans Entertainment */}
-      <EditorialSeparator illustration="/illustrations/transhumans-entertainment.svg" />
+      {/* Block 11: Section divider — Puzzles & Juegos */}
+      <SectionDivider
+        image="/illustrations/divider-juegos.png"
+        title="Puzzles & Juegos"
+        subtitle="Tomate un descanso y jugá"
+      />
     </div>
   );
 }

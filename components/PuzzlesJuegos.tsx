@@ -132,18 +132,6 @@ export default function PuzzlesJuegos() {
 
   return (
     <section className="py-16 px-6 md:px-12 bg-surface border-t border-grey/20">
-      <div className="max-w-4xl mx-auto text-center mb-10">
-        <h2
-          className="font-serif text-2xl md:text-3xl tracking-wide uppercase mb-2"
-          style={{ fontVariant: "small-caps" }}
-        >
-          Puzzles & Juegos
-        </h2>
-        <p className="font-body text-base text-grey">
-          Tomate un descanso y jugá.
-        </p>
-      </div>
-
       <div
         ref={scrollRef}
         className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide max-w-5xl mx-auto"
