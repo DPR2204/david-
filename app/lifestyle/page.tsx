@@ -46,7 +46,7 @@ const lifestyleData = [
     excerpt: "Los desafíos de fermentar a 1,500 metros sobre el nivel del mar.",
   },
   {
-    slug: "atardeceres-volcánicos",
+    slug: "atardeceres-volcanicos",
     title: "Atardeceres volcánicos",
     category: "Fotografía",
     image: placeholderImages.volcano,
@@ -57,7 +57,6 @@ const lifestyleData = [
 export default function LifestylePage() {
   const mdxPosts = getAllPosts("lifestyle");
 
-  // Use MDX posts if available, otherwise use placeholder data
   const posts = mdxPosts.length > 0
     ? mdxPosts.map((p) => ({
         slug: p.slug,
@@ -69,10 +68,10 @@ export default function LifestylePage() {
     : lifestyleData;
 
   return (
-    <div className="max-w-6xl mx-auto px-5 py-12 md:py-20">
+    <div className="max-w-6xl mx-auto px-5 py-8 md:py-12">
       <ScrollReveal>
         <SectionLabel>Lifestyle</SectionLabel>
-        <div className="h-[2px] bg-ink mt-4 mb-12" />
+        <div className="h-[2px] bg-ink mt-4 mb-8" />
       </ScrollReveal>
 
       {/* Feature row — 2 large cards */}

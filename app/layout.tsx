@@ -26,7 +26,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-paper text-ink">
         <Masthead />
-        <main className="pt-[100px]">{children}</main>
+        <main className="bg-paper min-h-screen pt-[105px]">{children}</main>
         <Footer />
       </body>
     </html>

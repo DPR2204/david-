@@ -97,19 +97,19 @@ export default function VisualPage() {
       : photos.filter((p) => p.series === activeSeries);
 
   return (
-    <div className="max-w-7xl mx-auto px-5 py-12 md:py-20">
+    <div className="max-w-7xl mx-auto px-5 py-8 md:py-12">
       {/* Header */}
       <ScrollReveal>
         <SectionLabel>Visual</SectionLabel>
-        <div className="h-[2px] bg-ink mt-4 mb-6" />
-        <h1 className="font-serif text-3xl md:text-5xl font-bold text-ink leading-tight mb-8">
+        <div className="h-[2px] bg-ink mt-4 mb-4" />
+        <h1 className="font-serif text-3xl md:text-5xl font-bold text-ink leading-tight mb-6">
           Desde el lago
         </h1>
       </ScrollReveal>
 
       {/* Filter pills */}
       <ScrollReveal>
-        <div className="flex flex-wrap gap-2 mb-10">
+        <div className="flex flex-wrap gap-2 mb-8">
           {series.map((s) => (
             <button
               key={s}
@@ -131,19 +131,27 @@ export default function VisualPage() {
 
       {/* AINUR section */}
       <ScrollReveal>
-        <section className="mt-20">
+        <section className="mt-16">
           <SectionLabel>AINUR Producción</SectionLabel>
           <div className="h-[2px] bg-ink mt-4 mb-6" />
-          <div className="relative h-[300px] md:h-[450px] bg-ink rounded-sm overflow-hidden flex items-center justify-center">
-            <div className="text-center px-8">
-              <h2 className="font-serif text-2xl md:text-4xl font-bold text-white mb-4">
+          <div className="relative h-[280px] md:h-[400px] bg-ink rounded-sm overflow-hidden flex items-center justify-center">
+            {/* Scanline texture */}
+            <div
+              className="absolute inset-0 pointer-events-none opacity-[0.03]"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 4px)",
+              }}
+            />
+            <div className="relative text-center px-8">
+              <h2 className="font-serif text-2xl md:text-4xl font-bold text-paper mb-4">
                 Narrativas del lago
               </h2>
               <p className="font-body text-base text-white/70 max-w-lg mx-auto">
                 Producción audiovisual que captura las historias, paisajes y comunidades del Lago de
                 Atitlán. Un proyecto junto a Kris.
               </p>
-              <div className="w-[50px] h-[3px] bg-red mx-auto mt-6" />
+              <div className="w-12 h-[3px] bg-red mx-auto mt-6" />
             </div>
           </div>
         </section>

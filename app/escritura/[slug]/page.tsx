@@ -44,10 +44,10 @@ export default async function EscrituraArticlePage({ params }: Props) {
   const { meta, content } = post;
 
   return (
-    <article className="max-w-3xl mx-auto px-5 py-12 md:py-20">
+    <article className="max-w-3xl mx-auto px-5 py-8 md:py-12">
       {/* Header */}
-      <header className="mb-12">
-        <div className="mb-4">
+      <header className="mb-8">
+        <div className="mb-3">
           <Link
             href="/escritura"
             className="font-mono text-xs uppercase tracking-wider text-grey hover:text-ink transition-colors"
@@ -63,7 +63,7 @@ export default async function EscrituraArticlePage({ params }: Props) {
           {meta.date}
           {meta.status && <span className="text-grey"> · {meta.status}</span>}
         </p>
-        <div className="w-[50px] h-[3px] bg-red mt-6" />
+        <div className="w-12 h-[3px] bg-red mt-6" />
       </header>
 
       {/* Body */}
@@ -72,7 +72,7 @@ export default async function EscrituraArticlePage({ params }: Props) {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-surface mt-16 pt-8">
+      <footer className="border-t border-surface mt-12 pt-6">
         <Link
           href="/escritura"
           className="font-mono text-xs uppercase tracking-wider text-red hover:text-ink transition-colors"

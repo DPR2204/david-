@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search, X } from "lucide-react";
@@ -16,26 +16,7 @@ const tabs = [
 
 export default function Masthead() {
   const pathname = usePathname();
-  const [visible, setVisible] = useState(true);
   const [searchOpen, setSearchOpen] = useState(false);
-  const lastScrollY = useRef(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentY = window.scrollY;
-      if (currentY < 10) {
-        setVisible(true);
-      } else if (currentY > lastScrollY.current) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
-      lastScrollY.current = currentY;
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -43,11 +24,7 @@ export default function Masthead() {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-paper transition-transform duration-300 ease-in-out ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-paper">
       {/* Level 1 - Logo */}
       <div className="flex items-center justify-between px-5 py-3">
         <div className="w-10" />
@@ -77,15 +54,15 @@ export default function Masthead() {
 
       {/* Level 2 - Section tabs */}
       <nav className="border-b border-surface">
-        <div className="flex overflow-x-auto scrollbar-hide px-5 gap-6">
+        <div className="flex overflow-x-auto scrollbar-hide px-5 gap-7">
           {tabs.map((tab) => (
             <Link
               key={tab.href}
               href={tab.href}
-              className={`whitespace-nowrap pb-2.5 pt-1 font-mono text-xs uppercase tracking-[0.15em] transition-colors ${
+              className={`whitespace-nowrap pb-3 pt-1 font-mono text-[0.7rem] uppercase tracking-[0.15em] transition-colors border-b-[3px] ${
                 isActive(tab.href)
-                  ? "text-ink border-b-[3px] border-ink"
-                  : "text-grey hover:text-ink"
+                  ? "text-ink border-ink"
+                  : "text-grey border-transparent hover:text-ink"
               }`}
             >
               {tab.label}
