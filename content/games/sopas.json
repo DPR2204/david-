@@ -1,0 +1,18 @@
+[
+  {
+    "id": "semana-1",
+    "words": ["ATITLAN", "CAFE", "VOLCAN", "MEZCAL", "LAGO", "PAN", "MASA", "CACAO", "FUEGO", "HORNO"]
+  },
+  {
+    "id": "semana-2",
+    "words": ["PEPIAN", "TAMALES", "CHILE", "TORTILLA", "MAIZ", "LECHE", "CREMA", "SALSA", "DULCE", "TRIGO"]
+  },
+  {
+    "id": "semana-3",
+    "words": ["SOLOLA", "KAYAK", "LANCHA", "MERCADO", "TEJIDO", "ADOBE", "COMAL", "MILPA", "FINCA", "GRANO"]
+  },
+  {
+    "id": "semana-4",
+    "words": ["PANAJACHEL", "VAPOR", "AROMA", "CARNE", "HIELO", "SAZÓN", "NUBES", "VELAS", "CAMPO", "PLATO"]
+  }
+]

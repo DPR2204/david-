@@ -34,6 +34,19 @@ body {
   animation: fade-in 0.8s ease-out 0.5s both;
 }
 
+/* Shake animation for invalid Wordle guesses */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
 /* Drop cap styling */
 .drop-cap::first-letter {
   font-family: 'Playfair Display', serif;
