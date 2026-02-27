@@ -1,4 +1,4 @@
-import { siteImages, siteIllustrations } from "./cloudinary";
+import { siteImages } from "./cloudinary";
 
 export interface Venture {
   name: string;
@@ -10,7 +10,6 @@ export interface Venture {
   type: string;
   url?: string;
   image?: string;
-  imageType?: "photo" | "illustration";
 }
 
 export const ventures: Venture[] = [
@@ -25,7 +24,6 @@ export const ventures: Venture[] = [
     type: "Empresa familiar",
     url: "https://atitlanrestaurantes.com",
     image: siteImages.davidRafa,
-    imageType: "photo",
   },
   {
     name: "The Coffee Lab",
@@ -37,8 +35,6 @@ export const ventures: Venture[] = [
     tag: "Café",
     type: "Emprendimiento familiar",
     url: "https://thecoffeelab.top",
-    image: siteIllustrations.espresso,
-    imageType: "illustration",
   },
   {
     name: "AINUR",
@@ -50,8 +46,6 @@ export const ventures: Venture[] = [
     tag: "Audiovisual",
     type: "Proyecto conjunto con Kris",
     url: "https://ainur.cam",
-    image: siteIllustrations.filmDirector,
-    imageType: "illustration",
   },
   {
     name: "Pan Nuestro",
@@ -62,8 +56,6 @@ export const ventures: Venture[] = [
       "Panadería artesanal especializada en masas laminadas. Croissants, danishes y pan de masa madre desde Atitlán.",
     tag: "Panadería",
     type: "Emprendimiento propio",
-    image: siteIllustrations.cook,
-    imageType: "illustration",
   },
   {
     name: "Atitlán Experience",
@@ -75,8 +67,6 @@ export const ventures: Venture[] = [
     tag: "Turismo",
     type: "Empresa familiar",
     url: "https://atitlanexperience.com",
-    image: siteIllustrations.island,
-    imageType: "illustration",
   },
   {
     name: "Habitación",
@@ -89,6 +79,5 @@ export const ventures: Venture[] = [
     type: "Proyecto comunitario",
     url: "https://habitacion.co",
     image: siteImages.aboutSecondary,
-    imageType: "photo",
   },
 ];

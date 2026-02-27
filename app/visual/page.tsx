@@ -4,9 +4,9 @@ import { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import PhotoMosaic, { Photo } from "@/components/PhotoMosaic";
-import { siteImages, siteIllustrations } from "@/lib/cloudinary";
+import { siteImages } from "@/lib/cloudinary";
 
-const series = ["Todas", "El Lago", "Gastronomía", "Café", "AINUR", "Comunidades"];
+const series = ["Todas", "El Lago", "Gastronomía", "Comunidades"];
 
 const photos: Photo[] = [
   {
@@ -24,46 +24,11 @@ const photos: Photo[] = [
     size: "medium",
   },
   {
-    src: siteIllustrations.espresso,
-    alt: "Café de especialidad",
-    caption: "V60 en proceso — The Coffee Lab",
-    series: "Café",
-    size: "medium",
-  },
-  {
     src: siteImages.davidMedium,
     alt: "David Rodas",
     caption: "David Rodas",
     series: "Comunidades",
     size: "small",
-  },
-  {
-    src: siteIllustrations.island,
-    alt: "Lago de Atitlán",
-    caption: "Volcanes y lago — Ilustración",
-    series: "El Lago",
-    size: "medium",
-  },
-  {
-    src: siteIllustrations.filmDirector,
-    alt: "Producción AINUR",
-    caption: "Narrativas del lago — AINUR",
-    series: "AINUR",
-    size: "small",
-  },
-  {
-    src: siteIllustrations.storefront,
-    alt: "Comercio local",
-    caption: "Comercio y tradición — Sololá",
-    series: "Comunidades",
-    size: "small",
-  },
-  {
-    src: siteIllustrations.cook,
-    alt: "Panadería artesanal",
-    caption: "Croissants del día — Pan Nuestro",
-    series: "Gastronomía",
-    size: "medium",
   },
   {
     src: siteImages.kitchen,

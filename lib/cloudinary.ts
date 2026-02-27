@@ -5,7 +5,7 @@ export const cloudinaryConfig = {
   cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "demo",
 };
 
-// Real images and illustrations — no stock photos
+// Real images — no stock photos
 export const siteImages = {
   heroMain: "/images/david-principal-hero.jpeg",
   kitchen: "/images/david-rafa-cocinando.jpeg",
@@ -17,12 +17,10 @@ export const siteImages = {
   lifestyle: "/images/cosas-de-david.jpeg",
 };
 
+// Transhumans editorial viñetas — ONLY for use in EditorialSeparator
+// RULE: Never use illustrations as card backgrounds, grid items, or gallery photos
 export const siteIllustrations = {
-  cook: "/illustrations/cook.svg",
-  coffee: "/illustrations/coffee.svg",
-  espresso: "/illustrations/espresso.svg",
-  filmDirector: "/illustrations/film-director.svg",
-  island: "/illustrations/island.svg",
-  storefront: "/illustrations/storefront.svg",
-  doodle: "/illustrations/doodle.svg",
+  growth: "/illustrations/transhumans-growth.svg",
+  coffee: "/illustrations/transhumans-coffee.svg",
+  entertainment: "/illustrations/transhumans-entertainment.svg",
 };

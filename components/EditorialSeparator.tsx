@@ -19,14 +19,14 @@ export default function EditorialSeparator({ illustration, alt = "", className =
             <img
               src={illustration}
               alt={alt}
-              className="h-24 md:h-32 w-auto opacity-[0.85] illustration-mono"
+              className="h-24 md:h-32 w-auto illustration-vineta"
               aria-hidden="true"
               onError={() => setHasImage(false)}
             />
           </div>
         ) : (
           <div className="flex justify-center py-2">
-            <span className="text-grey/30 text-lg">◆</span>
+            <span className="text-grey/30 text-lg">&#9670;</span>
           </div>
         )}
         <div className="h-px bg-grey/20 mt-8" />

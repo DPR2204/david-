@@ -16,29 +16,16 @@ interface LifestyleCardProps {
 
 export default function LifestyleCard({ post, size = "medium" }: LifestyleCardProps) {
   const heightClass = size === "large" ? "h-[400px] md:h-[500px]" : size === "medium" ? "h-[300px] md:h-[380px]" : "h-[250px] md:h-[300px]";
-  const isIllustration = post.image.endsWith(".svg");
 
   return (
     <Link href={`/lifestyle/${post.slug}`} className={`group relative block overflow-hidden rounded-sm ${heightClass}`}>
-      {isIllustration ? (
-        <div className="absolute inset-0 bg-surface flex items-center justify-center p-8">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={post.image}
-            alt=""
-            className="max-h-full max-w-full illustration-card group-hover:opacity-40 transition-opacity duration-500"
-            aria-hidden="true"
-          />
-        </div>
-      ) : (
-        <Image
-          src={post.image}
-          alt={post.title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
-      )}
+      <Image
+        src={post.image}
+        alt={post.title}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        sizes="(max-width: 768px) 100vw, 50vw"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 p-5">
         <span className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-red mb-2 block">

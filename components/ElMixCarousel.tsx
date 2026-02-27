@@ -5,8 +5,7 @@ import Image from "next/image";
 
 interface MixItem {
   href: string;
-  image: string;
-  imageType: "photo" | "illustration";
+  image: string | null;
   tag: string;
   title: string;
   excerpt: string;
@@ -16,15 +15,13 @@ const mixItems: MixItem[] = [
   {
     href: "/lifestyle/gastronomia-de-atitlan",
     image: "/images/cosas-de-david.jpeg",
-    imageType: "photo",
     tag: "Mixología",
     title: "Tierra de Humo",
     excerpt: "La receta del cóctel insignia: mezcal, cítricos del altiplano y un toque ahumado que evoca los volcanes.",
   },
   {
     href: "/ventures/pan-nuestro",
-    image: "/illustrations/cook.svg",
-    imageType: "illustration",
+    image: null,
     tag: "Panadería",
     title: "Masas laminadas en Atitlán",
     excerpt: "El proceso detrás de Pan Nuestro: croissants de mantequilla, fermentación lenta y el clima del lago.",
@@ -32,31 +29,27 @@ const mixItems: MixItem[] = [
   {
     href: "/escritura/manifiesto-terricola",
     image: "/images/david-solo-vertical.jpeg",
-    imageType: "photo",
     tag: "Filosofía",
     title: "El Manifiesto Terrícola",
     excerpt: "Una exploración sobre identidad planetaria, ciudadanía consciente y el futuro de la humanidad.",
   },
   {
     href: "/lifestyle/el-ritual-del-cafe",
-    image: "/illustrations/espresso.svg",
-    imageType: "illustration",
+    image: null,
     tag: "Café",
     title: "Café de altura",
     excerpt: "Notas de cata del mejor grano de Sololá. Del cultivo a la taza, un viaje sensorial.",
   },
   {
     href: "/ventures/ainur",
-    image: "/illustrations/film-director.svg",
-    imageType: "illustration",
+    image: null,
     tag: "Audiovisual",
     title: "Narrativas del lago",
     excerpt: "Últimas producciones de AINUR: documentales, cortometrajes y contenido visual desde Atitlán.",
   },
   {
     href: "/ventures/atitlan-experience",
-    image: "/illustrations/island.svg",
-    imageType: "illustration",
+    image: null,
     tag: "Turismo",
     title: "El futuro del turismo en Atitlán",
     excerpt: "Modelo B2B/B2C para un turismo responsable que beneficia a las comunidades locales.",
@@ -136,17 +129,7 @@ export default function ElMixCarousel() {
               className="snap-center shrink-0 w-[280px] md:w-[320px] group"
             >
               <div className="relative aspect-[4/5] rounded-sm overflow-hidden mb-3">
-                {item.imageType === "illustration" ? (
-                  <div className="absolute inset-0 bg-surface flex items-center justify-center p-8">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="max-h-full max-w-full illustration-mono opacity-60 group-hover:opacity-80 transition-opacity duration-500"
-                      aria-hidden="true"
-                    />
-                  </div>
-                ) : (
+                {item.image ? (
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -154,6 +137,22 @@ export default function ElMixCarousel() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="320px"
                   />
+                ) : (
+                  <div className="absolute inset-0 bg-ink flex flex-col items-center justify-center px-6">
+                    <div
+                      className="absolute inset-0 pointer-events-none opacity-[0.03]"
+                      style={{
+                        backgroundImage:
+                          "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 4px)",
+                      }}
+                    />
+                    <span className="relative font-mono text-[0.5rem] uppercase tracking-[0.2em] text-red mb-2">
+                      {item.tag}
+                    </span>
+                    <h4 className="relative font-serif text-xl font-bold text-paper text-center leading-tight">
+                      {item.title}
+                    </h4>
+                  </div>
                 )}
               </div>
               <span className="font-mono text-[0.55rem] uppercase tracking-wider text-red block mb-1">

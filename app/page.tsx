@@ -91,17 +91,7 @@ export default function HomePage() {
                   ${i === 0 || i === 4 ? "col-span-2 md:col-span-2 aspect-[16/9]" : "col-span-1 aspect-[4/5]"}
                 `}
               >
-                {v.imageType === "illustration" && v.image ? (
-                  <div className="absolute inset-0 bg-surface flex items-center justify-center p-6">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={v.image}
-                      alt=""
-                      className="max-h-full max-w-full illustration-card group-hover:opacity-40 transition-opacity duration-500"
-                      aria-hidden="true"
-                    />
-                  </div>
-                ) : v.image ? (
+                {v.image ? (
                   <Image
                     src={v.image}
                     alt={v.name}
@@ -110,7 +100,15 @@ export default function HomePage() {
                     sizes={i === 0 || i === 4 ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 50vw, 33vw"}
                   />
                 ) : (
-                  <div className="absolute inset-0 bg-ink" />
+                  <div className="absolute inset-0 bg-ink">
+                    <div
+                      className="absolute inset-0 pointer-events-none opacity-[0.03]"
+                      style={{
+                        backgroundImage:
+                          "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 4px)",
+                      }}
+                    />
+                  </div>
                 )}
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -129,8 +127,8 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Block 5: Ilustración editorial — cocina */}
-      <EditorialSeparator illustration="/illustrations/cook.svg" />
+      {/* Block 5: Viñeta editorial — Transhumans Growth */}
+      <EditorialSeparator illustration="/illustrations/transhumans-growth.svg" />
 
       {/* Block 6: Intermediate hero photo — David y Rafa cocinando */}
       <section className="relative w-full overflow-hidden" style={{ aspectRatio: '21/9' }}>
@@ -151,8 +149,8 @@ export default function HomePage() {
       {/* Block 7: Qué estoy leyendo */}
       <QueEstoyLeyendo />
 
-      {/* Block 8: Ilustración editorial — café/lectura */}
-      <EditorialSeparator illustration="/illustrations/coffee.svg" />
+      {/* Block 8: Viñeta editorial — Transhumans Coffee */}
+      <EditorialSeparator illustration="/illustrations/transhumans-coffee.svg" />
 
       {/* Block 9: Bloque "Ahora" */}
       <section className="py-16 px-6 md:px-12 bg-surface">
@@ -198,8 +196,8 @@ export default function HomePage() {
       {/* Block 10: Puzzles & Juegos */}
       <PuzzlesJuegos />
 
-      {/* Block 11: Ilustración editorial — doodle/creatividad */}
-      <EditorialSeparator illustration="/illustrations/doodle.svg" />
+      {/* Block 11: Viñeta editorial — Transhumans Entertainment */}
+      <EditorialSeparator illustration="/illustrations/transhumans-entertainment.svg" />
 
       {/* Block 12: Latest article — Manifiesto teaser */}
       {featuredPost && (
