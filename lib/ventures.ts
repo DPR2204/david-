@@ -1,3 +1,5 @@
+import { siteImages, siteIllustrations } from "./cloudinary";
+
 export interface Venture {
   name: string;
   slug: string;
@@ -8,6 +10,7 @@ export interface Venture {
   type: string;
   url?: string;
   image?: string;
+  imageType?: "photo" | "illustration";
 }
 
 export const ventures: Venture[] = [
@@ -21,7 +24,8 @@ export const ventures: Venture[] = [
     tag: "Gastronomía",
     type: "Empresa familiar",
     url: "https://atitlanrestaurantes.com",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
+    image: siteImages.davidRafa,
+    imageType: "photo",
   },
   {
     name: "The Coffee Lab",
@@ -33,7 +37,8 @@ export const ventures: Venture[] = [
     tag: "Café",
     type: "Emprendimiento familiar",
     url: "https://thecoffeelab.top",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop",
+    image: siteIllustrations.espresso,
+    imageType: "illustration",
   },
   {
     name: "AINUR",
@@ -45,7 +50,8 @@ export const ventures: Venture[] = [
     tag: "Audiovisual",
     type: "Proyecto conjunto con Kris",
     url: "https://ainur.cam",
-    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&h=600&fit=crop",
+    image: siteIllustrations.filmDirector,
+    imageType: "illustration",
   },
   {
     name: "Pan Nuestro",
@@ -56,7 +62,8 @@ export const ventures: Venture[] = [
       "Panadería artesanal especializada en masas laminadas. Croissants, danishes y pan de masa madre desde Atitlán.",
     tag: "Panadería",
     type: "Emprendimiento propio",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=600&fit=crop",
+    image: siteIllustrations.cook,
+    imageType: "illustration",
   },
   {
     name: "Atitlán Experience",
@@ -68,7 +75,8 @@ export const ventures: Venture[] = [
     tag: "Turismo",
     type: "Empresa familiar",
     url: "https://atitlanexperience.com",
-    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&h=600&fit=crop",
+    image: siteIllustrations.island,
+    imageType: "illustration",
   },
   {
     name: "Habitación",
@@ -80,6 +88,7 @@ export const ventures: Venture[] = [
     tag: "Comunidad",
     type: "Proyecto comunitario",
     url: "https://habitacion.co",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop",
+    image: siteImages.aboutSecondary,
+    imageType: "photo",
   },
 ];

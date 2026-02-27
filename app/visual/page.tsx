@@ -4,85 +4,85 @@ import { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import PhotoMosaic, { Photo } from "@/components/PhotoMosaic";
-import { placeholderImages } from "@/lib/cloudinary";
+import { siteImages, siteIllustrations } from "@/lib/cloudinary";
 
 const series = ["Todas", "El Lago", "Gastronomía", "Café", "AINUR", "Comunidades"];
 
 const photos: Photo[] = [
   {
-    src: placeholderImages.lake,
-    alt: "Amanecer en el Lago de Atitlán",
-    caption: "Amanecer sobre el Lago de Atitlán — Panajachel",
+    src: siteImages.heroMain,
+    alt: "David Rodas en el Lago de Atitlán",
+    caption: "Lago de Atitlán — Panajachel",
     series: "El Lago",
     size: "large",
   },
   {
-    src: placeholderImages.food,
-    alt: "Gastronomía local",
-    caption: "Plato del día — Restaurantes Atitlán",
+    src: siteImages.lifestyle,
+    alt: "Gastronomía y estilo de vida",
+    caption: "Detalles del día a día — Atitlán",
     series: "Gastronomía",
     size: "medium",
   },
   {
-    src: placeholderImages.coffee,
+    src: siteIllustrations.espresso,
     alt: "Café de especialidad",
     caption: "V60 en proceso — The Coffee Lab",
     series: "Café",
     size: "medium",
   },
   {
-    src: placeholderImages.village,
-    alt: "San Juan La Laguna",
-    caption: "Calles de San Juan La Laguna",
+    src: siteImages.davidMedium,
+    alt: "David Rodas",
+    caption: "David Rodas",
     series: "Comunidades",
     size: "small",
   },
   {
-    src: placeholderImages.volcano,
-    alt: "Volcán San Pedro",
-    caption: "Volcán San Pedro al atardecer",
+    src: siteIllustrations.island,
+    alt: "Lago de Atitlán",
+    caption: "Volcanes y lago — Ilustración",
     series: "El Lago",
     size: "medium",
   },
   {
-    src: placeholderImages.film,
+    src: siteIllustrations.filmDirector,
     alt: "Producción AINUR",
-    caption: "Detrás de cámaras — AINUR Producción",
+    caption: "Narrativas del lago — AINUR",
     series: "AINUR",
     size: "small",
   },
   {
-    src: placeholderImages.market,
-    alt: "Mercado de Sololá",
-    caption: "Mercado de Sololá — Día de plaza",
+    src: siteIllustrations.storefront,
+    alt: "Comercio local",
+    caption: "Comercio y tradición — Sololá",
     series: "Comunidades",
     size: "small",
   },
   {
-    src: placeholderImages.bread,
-    alt: "Pan artesanal",
+    src: siteIllustrations.cook,
+    alt: "Panadería artesanal",
     caption: "Croissants del día — Pan Nuestro",
     series: "Gastronomía",
     size: "medium",
   },
   {
-    src: placeholderImages.landscape,
-    alt: "Vista panorámica del lago",
-    caption: "Tres volcanes — Vista desde San Marcos",
-    series: "El Lago",
+    src: siteImages.kitchen,
+    alt: "En la cocina",
+    caption: "David y Rafa cocinando — Restaurantes Atitlán",
+    series: "Gastronomía",
     size: "large",
   },
   {
-    src: placeholderImages.restaurant,
-    alt: "Interior del restaurante",
-    caption: "Restaurante Atitlán — Panajachel",
+    src: siteImages.davidRafa,
+    alt: "David y Rafa",
+    caption: "David y Rafa — Restaurantes Atitlán",
     series: "Gastronomía",
     size: "small",
   },
   {
-    src: placeholderImages.travel,
-    alt: "Lancha en el lago",
-    caption: "Cruzando el lago — Atitlán Experience",
+    src: siteImages.aboutSecondary,
+    alt: "David Rodas",
+    caption: "Desde el lago — Atitlán",
     series: "El Lago",
     size: "medium",
   },
@@ -98,7 +98,6 @@ export default function VisualPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-5 py-8 md:py-12">
-      {/* Header */}
       <ScrollReveal>
         <SectionLabel>Visual</SectionLabel>
         <div className="h-[2px] bg-ink mt-4 mb-4" />
@@ -107,7 +106,6 @@ export default function VisualPage() {
         </h1>
       </ScrollReveal>
 
-      {/* Filter pills */}
       <ScrollReveal>
         <div className="flex flex-wrap gap-2 mb-8">
           {series.map((s) => (
@@ -126,16 +124,13 @@ export default function VisualPage() {
         </div>
       </ScrollReveal>
 
-      {/* Mosaic */}
       <PhotoMosaic photos={filtered} />
 
-      {/* AINUR section */}
       <ScrollReveal>
         <section className="mt-16">
           <SectionLabel>AINUR Producción</SectionLabel>
           <div className="h-[2px] bg-ink mt-4 mb-6" />
           <div className="relative h-[280px] md:h-[400px] bg-ink rounded-sm overflow-hidden flex items-center justify-center">
-            {/* Scanline texture */}
             <div
               className="absolute inset-0 pointer-events-none opacity-[0.03]"
               style={{

@@ -131,3 +131,14 @@ body {
 .prose a:hover {
   color: var(--color-ink);
 }
+
+/* Illustration monochrome filter for editorial consistency */
+.illustration-mono {
+  filter: grayscale(1) contrast(1.1) brightness(0.95);
+}
+
+/* Illustration card background treatment */
+.illustration-card {
+  filter: grayscale(1) contrast(0.9) brightness(0.85);
+  opacity: 0.3;
+}

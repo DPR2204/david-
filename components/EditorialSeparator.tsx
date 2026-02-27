@@ -1,25 +1,35 @@
-import Image from "next/image";
+'use client';
+import { useState } from 'react';
 
 interface EditorialSeparatorProps {
   illustration: string;
+  alt?: string;
+  className?: string;
 }
 
-export default function EditorialSeparator({ illustration }: EditorialSeparatorProps) {
+export default function EditorialSeparator({ illustration, alt = "", className = "" }: EditorialSeparatorProps) {
+  const [hasImage, setHasImage] = useState(true);
+
   return (
-    <section className="py-12 md:py-16 flex flex-col items-center justify-center">
-      <div className="w-full max-w-md px-6">
-        <div className="h-px bg-grey/30 mb-8" />
-        <div className="flex justify-center">
-          <Image
-            src={illustration}
-            alt=""
-            width={300}
-            height={150}
-            className="opacity-80"
-            aria-hidden="true"
-          />
-        </div>
-        <div className="h-px bg-grey/30 mt-8" />
+    <section className={`py-10 md:py-14 flex flex-col items-center justify-center ${className}`}>
+      <div className="w-full max-w-lg px-6">
+        <div className="h-px bg-grey/20 mb-8" />
+        {hasImage ? (
+          <div className="flex justify-center">
+            <img
+              src={illustration}
+              alt={alt}
+              className="h-24 md:h-32 w-auto opacity-[0.85] illustration-mono"
+              aria-hidden="true"
+              onError={() => setHasImage(false)}
+            />
+          </div>
+        ) : (
+          <div className="flex justify-center py-2">
+            <span className="text-grey/30 text-lg">◆</span>
+          </div>
+        )}
+        <div className="h-px bg-grey/20 mt-8" />
       </div>
     </section>
   );

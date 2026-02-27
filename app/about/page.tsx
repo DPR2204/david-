@@ -1,7 +1,9 @@
 import { Mail } from "lucide-react";
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import DropCap from "@/components/DropCap";
+import { siteImages } from "@/lib/cloudinary";
 
 export const metadata = {
   title: "Sobre mí — David Rodas",
@@ -124,6 +126,22 @@ export default function AboutPage() {
             — Manifiesto Terrícola
           </p>
           <div className="w-12 h-[3px] bg-red mt-8" />
+        </ScrollReveal>
+      </section>
+
+      {/* ── Foto editorial ── */}
+      <section className="max-w-3xl mx-auto px-5 py-8">
+        <ScrollReveal>
+          <div className="relative aspect-[3/2] rounded-sm overflow-hidden">
+            <Image
+              src={siteImages.aboutBW}
+              alt="David Rodas"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+              priority
+            />
+          </div>
         </ScrollReveal>
       </section>
 

@@ -3,21 +3,21 @@
     "title": "Dune",
     "author": "Frank Herbert",
     "type": "libro",
-    "cover": "https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=540&fit=crop",
+    "cover": null,
     "note": "La política del desierto como espejo de la política del agua en Atitlán."
   },
   {
     "title": "Foundation",
     "author": "Isaac Asimov",
     "type": "libro",
-    "cover": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=400&h=540&fit=crop",
+    "cover": null,
     "note": "Psicohistoria aplicada a la dirección de un ecosistema familiar."
   },
   {
     "title": "The Hard Thing About Hard Things",
     "author": "Ben Horowitz",
     "type": "libro",
-    "cover": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=540&fit=crop",
+    "cover": null,
     "note": "Construir un negocio cuando no hay manual."
   }
 ]

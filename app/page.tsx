@@ -8,7 +8,7 @@ import QueEstoyLeyendo from "@/components/QueEstoyLeyendo";
 import PuzzlesJuegos from "@/components/PuzzlesJuegos";
 import { ventures } from "@/lib/ventures";
 import { getAllPosts } from "@/lib/mdx";
-import { placeholderImages } from "@/lib/cloudinary";
+import { siteImages } from "@/lib/cloudinary";
 
 export default function HomePage() {
   const escrituraPosts = getAllPosts("escritura");
@@ -16,40 +16,33 @@ export default function HomePage() {
 
   return (
     <div>
-      {/* Block 1: Hero with background image */}
+      {/* Block 1: Hero with real photo */}
       <section className="relative w-full h-[85vh] md:h-[90vh] overflow-hidden -mt-[105px]">
-        {/* Background image */}
         <div className="absolute inset-0">
           <Image
-            src={placeholderImages.heroLake}
-            alt="Lago de Atitlán"
+            src={siteImages.heroMain}
+            alt="David Rodas"
             fill
             className="object-cover"
             sizes="100vw"
             priority
           />
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/30 to-transparent" />
         </div>
 
-        {/* Content anchored to bottom */}
         <div className="relative h-full flex flex-col justify-end px-6 md:px-12 pb-12 md:pb-16 max-w-5xl">
-          {/* Dateline with fade-in animation */}
           <span className="font-mono text-xs uppercase tracking-[0.25em] text-paper/70 mb-4 animate-fade-in">
             Lake Atitlán &middot; 14&deg;44&apos;N 91&deg;12&apos;W &middot; Desde 1960
           </span>
 
-          {/* Main headline */}
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[0.95] mb-6">
             Construyendo<br />desde el lago.
           </h1>
 
-          {/* Deck */}
           <p className="font-body text-lg md:text-xl text-paper/70 max-w-lg leading-relaxed">
             Un ecosistema de proyectos, pensamiento y escritura desde las orillas del Lago de Atitlán.
           </p>
 
-          {/* Red rule */}
           <div className="w-12 h-[3px] bg-red mt-6" />
         </div>
       </section>
@@ -74,7 +67,6 @@ export default function HomePage() {
       {/* Block 4: Ventures visual cards */}
       <section className="px-6 md:px-12 py-16 bg-paper">
         <ScrollReveal>
-          {/* Section header */}
           <div className="max-w-6xl mx-auto mb-10">
             <SectionLabel>Ventures</SectionLabel>
             <div className="flex items-baseline justify-between mt-2">
@@ -89,7 +81,6 @@ export default function HomePage() {
             <div className="h-[2px] bg-ink mt-4" />
           </div>
 
-          {/* Visual grid */}
           <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {ventures.map((v, i) => (
               <Link
@@ -100,8 +91,17 @@ export default function HomePage() {
                   ${i === 0 || i === 4 ? "col-span-2 md:col-span-2 aspect-[16/9]" : "col-span-1 aspect-[4/5]"}
                 `}
               >
-                {/* Background image or dark placeholder */}
-                {v.image ? (
+                {v.imageType === "illustration" && v.image ? (
+                  <div className="absolute inset-0 bg-surface flex items-center justify-center p-6">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={v.image}
+                      alt=""
+                      className="max-h-full max-w-full illustration-card group-hover:opacity-40 transition-opacity duration-500"
+                      aria-hidden="true"
+                    />
+                  </div>
+                ) : v.image ? (
                   <Image
                     src={v.image}
                     alt={v.name}
@@ -113,10 +113,8 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-ink" />
                 )}
 
-                {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-                {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
                   <span className="font-mono text-[0.5rem] md:text-[0.55rem] uppercase tracking-wider text-paper/60 block mb-1">
                     {v.tag}
@@ -131,19 +129,18 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Block 5: Ilustración editorial — lago/volcanes */}
-      <EditorialSeparator illustration="/illustrations/lake-scene.svg" />
+      {/* Block 5: Ilustración editorial — cocina */}
+      <EditorialSeparator illustration="/illustrations/cook.svg" />
 
-      {/* Block 6: Intermediate hero photo */}
-      <section className="relative w-full aspect-[21/9] md:aspect-[3/1] overflow-hidden">
+      {/* Block 6: Intermediate hero photo — David y Rafa cocinando */}
+      <section className="relative w-full overflow-hidden" style={{ aspectRatio: '21/9' }}>
         <Image
-          src={placeholderImages.kitchen}
-          alt="Cocina Restaurantes Atitlán"
+          src={siteImages.kitchen}
+          alt="En la cocina"
           fill
           className="object-cover"
           sizes="100vw"
         />
-        {/* Subtle caption in the corner */}
         <div className="absolute bottom-4 right-6">
           <span className="font-mono text-[0.5rem] uppercase tracking-wider text-paper/50">
             Restaurantes Atitlán &middot; Panajachel
@@ -154,8 +151,8 @@ export default function HomePage() {
       {/* Block 7: Qué estoy leyendo */}
       <QueEstoyLeyendo />
 
-      {/* Block 8: Ilustración editorial — lectura/escritura */}
-      <EditorialSeparator illustration="/illustrations/reading-scene.svg" />
+      {/* Block 8: Ilustración editorial — café/lectura */}
+      <EditorialSeparator illustration="/illustrations/coffee.svg" />
 
       {/* Block 9: Bloque "Ahora" */}
       <section className="py-16 px-6 md:px-12 bg-surface">
@@ -201,8 +198,8 @@ export default function HomePage() {
       {/* Block 10: Puzzles & Juegos */}
       <PuzzlesJuegos />
 
-      {/* Block 11: Ilustración editorial — juegos/puzzle */}
-      <EditorialSeparator illustration="/illustrations/games-scene.svg" />
+      {/* Block 11: Ilustración editorial — doodle/creatividad */}
+      <EditorialSeparator illustration="/illustrations/doodle.svg" />
 
       {/* Block 12: Latest article — Manifiesto teaser */}
       {featuredPost && (
@@ -214,9 +211,7 @@ export default function HomePage() {
 
               <Link href={`/escritura/${featuredPost.slug}`} className="group block">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                  {/* Poster visual */}
                   <div className="relative aspect-[4/5] bg-ink rounded-sm overflow-hidden">
-                    {/* Scanline texture */}
                     <div
                       className="absolute inset-0 pointer-events-none opacity-[0.03]"
                       style={{
@@ -236,7 +231,6 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  {/* Content */}
                   <div>
                     <span className="font-mono text-xs uppercase tracking-[0.2em] text-red mb-3 block">
                       {featuredPost.status || "Obra en progreso"}

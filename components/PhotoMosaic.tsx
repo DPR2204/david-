@@ -37,19 +37,32 @@ export default function PhotoMosaic({ photos }: PhotoMosaicProps) {
               ? "h-[200px] md:h-[280px]"
               : "h-[180px] md:h-[220px]";
 
+          const isIllustration = photo.src.endsWith(".svg");
+
           return (
             <button
               key={i}
               onClick={() => setLightboxIndex(i)}
               className={`group relative overflow-hidden rounded-sm ${spanClass} ${heightClass}`}
             >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                className="object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                sizes="(max-width: 768px) 50vw, 33vw"
-              />
+              {isIllustration ? (
+                <div className="absolute inset-0 bg-surface flex items-center justify-center p-6">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="max-h-full max-w-full illustration-mono opacity-60 group-hover:opacity-90 transition-opacity duration-500"
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+              )}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="font-mono text-xs text-white">{photo.caption}</p>
