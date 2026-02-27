@@ -8,29 +8,29 @@ interface SectionDividerProps {
 
 export default function SectionDivider({ image, title, subtitle }: SectionDividerProps) {
   return (
-    <section className="py-16 md:py-20 flex flex-col items-center px-6">
-      <div className="w-[60%] h-px bg-grey/20 mb-10" />
+    <section className="pt-6 pb-4 flex flex-col items-center px-6">
+      <div className="w-[60%] h-px bg-grey/20 mb-4" />
 
-      <div className="relative w-[95%] max-w-[800px] aspect-[16/7]">
+      <div className="relative w-[90%] max-w-[500px] aspect-[16/7]">
         <Image
           src={image}
           alt={title}
           fill
           className="object-contain"
-          sizes="(max-width: 768px) 95vw, 800px"
+          sizes="(max-width: 768px) 90vw, 500px"
         />
       </div>
 
-      <h2 className="font-serif text-sm md:text-base uppercase tracking-[0.2em] text-ink mt-8 mb-1">
+      <h2 className="font-serif text-sm md:text-base uppercase tracking-[0.2em] text-ink mt-2">
         {title}
       </h2>
       {subtitle && (
-        <p className="font-body text-sm italic text-grey">
+        <p className="font-body text-sm italic text-grey mt-1">
           {subtitle}
         </p>
       )}
 
-      <div className="w-[60%] h-px bg-grey/20 mt-10" />
+      <div className="w-[60%] h-px bg-grey/20 mt-3" />
     </section>
   );
 }
