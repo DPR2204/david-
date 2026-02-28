@@ -92,7 +92,7 @@ export default function ElMixCarousel() {
   };
 
   return (
-    <section className="py-16 bg-paper border-t border-grey/20">
+    <section className="py-16 bg-surface border-t border-grey/20">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <h2
           className="font-serif text-2xl md:text-3xl text-center mb-10 tracking-wide uppercase"

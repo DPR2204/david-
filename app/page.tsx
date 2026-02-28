@@ -6,10 +6,15 @@ import ElMixCarousel from "@/components/ElMixCarousel";
 import SectionDivider from "@/components/SectionDivider";
 import QueEstoyLeyendo from "@/components/QueEstoyLeyendo";
 import PuzzlesJuegos from "@/components/PuzzlesJuegos";
+import LifestyleCard from "@/components/LifestyleCard";
 import { ventures } from "@/lib/ventures";
+import { getAllPosts } from "@/lib/mdx";
 import { siteImages } from "@/lib/cloudinary";
 
 export default function HomePage() {
+  const escrituraPosts = getAllPosts("escritura").slice(0, 6);
+  const lifestylePosts = getAllPosts("lifestyle").slice(0, 3);
+
   return (
     <div>
       {/* Block 1: Hero with real photo */}
@@ -60,7 +65,7 @@ export default function HomePage() {
       {/* Block 3: Carrusel "El Mix" */}
       <ElMixCarousel />
 
-      {/* Block 4: Ventures visual cards */}
+      {/* Block 4: Ventures mosaic */}
       <section className="px-6 md:px-12 py-16 bg-paper">
         <ScrollReveal>
           <div className="max-w-6xl mx-auto mb-10">
@@ -132,14 +137,7 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Block 5: Section divider — Escritura */}
-      <SectionDivider
-        image="/illustrations/divider-escritura.png"
-        title="Escritura"
-        subtitle="Ensayos, ideas y exploraciones"
-      />
-
-      {/* Block 6: Intermediate hero photo — David y Rafa cocinando */}
+      {/* Block 5: Intermediate hero photo — visual pause after Ventures */}
       <section className="relative w-full overflow-hidden" style={{ aspectRatio: '21/9' }}>
         <Image
           src={siteImages.kitchen}
@@ -155,67 +153,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Block 7: Escritura — New Yorker-style grid */}
+      {/* Block 6: Section divider — Escritura */}
+      <SectionDivider
+        image="/illustrations/divider-escritura.png"
+        title="Escritura"
+        subtitle="Ensayos, ideas y exploraciones"
+      />
+
+      {/* Block 7: Escritura — dynamic grid from MDX */}
       <section className="py-16 md:py-24 px-6 bg-paper">
         <ScrollReveal>
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10">
-              {[
-                {
-                  slug: "manifiesto-terricola",
-                  category: "FILOSOFÍA",
-                  title: "Manifiesto Terrícola",
-                  excerpt: "La Tierra no necesita más ciudadanos de naciones. Necesita habitantes conscientes de un planeta.",
-                  image: "/images/blog/manifiesto-terricola.png",
-                },
-                {
-                  slug: "responsabilidad-planetaria",
-                  category: "FILOSOFÍA",
-                  title: "Responsabilidad planetaria: por qué donar no es caridad",
-                  excerpt: "Una reflexión sobre la diferencia entre caridad y responsabilidad en un mundo interconectado.",
-                  image: "/images/blog/responsabilidad-planetaria.png",
-                },
-                {
-                  slug: "del-grano-a-la-taza",
-                  category: "TÉCNICO",
-                  title: "Del grano a la taza: variables que importan",
-                  excerpt: "Las variables que transforman un café ordinario en una experiencia sensorial.",
-                  image: "/images/blog/del-grano-a-la-taza.png",
-                },
-                {
-                  slug: "sesenta-anos-sirviendo-al-lago",
-                  category: "NARRATIVA",
-                  title: "Sesenta años sirviendo al lago",
-                  excerpt: "Una historia familiar que empieza en 1960 y sigue viva en tres locaciones alrededor del Lago de Atitlán.",
-                  image: "/images/blog/sesenta-anos-sirviendo-al-lago.png",
-                },
-                {
-                  slug: "autodidactas-era-ia",
-                  category: "TÉCNICO",
-                  title: "Autodidactas en la era de la inteligencia artificial",
-                  excerpt: "Aprender sin institución en un mundo donde la IA democratiza el conocimiento.",
-                  image: "/images/blog/autodidactas-era-ia.png",
-                },
-                {
-                  slug: "optimizacion-filosofia-de-vida",
-                  category: "FILOSOFÍA",
-                  title: "La optimización como filosofía de vida",
-                  excerpt: "Tratar cada sistema como un problema de ingeniería con solución elegante.",
-                  image: "/images/blog/optimizacion-filosofia-de-vida.png",
-                },
-              ].map((post) => (
+              {escrituraPosts.map((post) => (
                 <Link key={post.slug} href={`/escritura/${post.slug}`} className="group block">
-                  <div className="relative aspect-square overflow-hidden rounded-sm mb-4">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition-opacity group-hover:opacity-90"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
+                  {post.image && (
+                    <div className="relative aspect-square overflow-hidden rounded-sm mb-4">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-opacity group-hover:opacity-90"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </div>
+                  )}
                   <span className="font-mono text-[0.55rem] uppercase tracking-widest text-red">
-                    {post.category}
+                    {post.category.toUpperCase()}
                   </span>
                   <h3 className="font-serif text-xl font-bold text-ink mt-1 mb-2 group-hover:text-red transition-colors">
                     {post.title}
@@ -249,56 +213,123 @@ export default function HomePage() {
       {/* Block 9: Qué estoy leyendo */}
       <QueEstoyLeyendo />
 
-      {/* Block 9: Bloque "Ahora" */}
-      <section className="py-16 px-6 md:px-12 bg-surface">
-        <ScrollReveal>
-          <div className="max-w-4xl mx-auto">
-            <SectionLabel>Ahora</SectionLabel>
-            <div className="h-[2px] bg-ink mt-4 mb-8" />
+      {/* Block 10: Section divider — Lifestyle */}
+      <SectionDivider
+        image="/illustrations/divider-lifestyle.png"
+        title="Lifestyle"
+        subtitle="Gastronomía, café y vida en el lago"
+      />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-              <div className="flex items-start gap-4">
-                <span className="font-serif text-3xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
-                <p className="font-body text-base text-ink">
-                  Abriendo <strong>Pan Nuestro</strong> — la panadería artesanal en Atitlán
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="font-serif text-3xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
-                <p className="font-body text-base text-ink">
-                  Escribiendo el <strong>Manifiesto Terrícola</strong>
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="font-serif text-3xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
-                <p className="font-body text-base text-ink">
-                  Diseñando la <strong>carta de cócteles</strong> para la temporada
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="font-serif text-3xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
-                <p className="font-body text-base text-ink">
-                  Construyendo sistemas de <strong>automatización</strong> con IA
-                </p>
-              </div>
+      {/* Block 11: Lifestyle teaser */}
+      <section className="py-16 px-6 md:px-12 bg-paper">
+        <ScrollReveal>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-3">
+              {lifestylePosts.map((post) => (
+                <LifestyleCard
+                  key={post.slug}
+                  post={{
+                    slug: post.slug,
+                    title: post.title,
+                    category: post.category,
+                    image: post.image || siteImages.davidMedium,
+                    excerpt: post.excerpt,
+                  }}
+                  size="small"
+                />
+              ))}
             </div>
 
-            <p className="font-mono text-[0.6rem] uppercase tracking-wider text-grey mt-8">
-              Última actualización: Febrero 2026
-            </p>
+            <div className="text-center mt-10">
+              <Link
+                href="/lifestyle"
+                className="font-mono text-xs uppercase tracking-widest text-ink hover:text-red transition-colors"
+              >
+                Explorar lifestyle →
+              </Link>
+            </div>
           </div>
         </ScrollReveal>
       </section>
 
-      {/* Block 11: Section divider — Puzzles & Juegos */}
+      {/* Block 12: Ahora */}
+      <section className="py-16 px-6 md:px-12 bg-surface">
+        <ScrollReveal>
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+              <div className="shrink-0">
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-red block mb-2">Ahora</span>
+                <p className="font-serif text-4xl md:text-5xl font-bold text-ink leading-none">Febrero</p>
+                <p className="font-serif text-4xl md:text-5xl font-light text-grey/40 leading-none">2026</p>
+              </div>
+
+              <div className="flex-1">
+                <div className="h-[2px] bg-ink mb-8 md:mt-2" />
+                <div className="grid grid-cols-1 gap-y-5">
+                  <div className="flex items-start gap-4">
+                    <span className="font-serif text-2xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
+                    <p className="font-body text-base text-ink">
+                      Abriendo <strong>Pan Nuestro</strong> — la panadería artesanal en Atitlán
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="font-serif text-2xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
+                    <p className="font-body text-base text-ink">
+                      Escribiendo el <strong>Manifiesto Terrícola</strong>
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="font-serif text-2xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
+                    <p className="font-body text-base text-ink">
+                      Diseñando la <strong>carta de cócteles</strong> para la temporada
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="font-serif text-2xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
+                    <p className="font-body text-base text-ink">
+                      Construyendo sistemas de <strong>automatización</strong> con IA
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Block 13: Section divider — Puzzles & Juegos */}
       <SectionDivider
         image="/illustrations/divider-juegos.png"
         title="Puzzles & Juegos"
         subtitle="Tomate un descanso y jugá"
       />
 
-      {/* Block 12: Puzzles & Juegos */}
+      {/* Block 14: Puzzles & Juegos */}
       <PuzzlesJuegos />
+
+      {/* Block 15: Editorial closing */}
+      <section className="bg-ink py-16 md:py-24 px-6">
+        <div className="max-w-2xl mx-auto flex flex-col items-center text-center">
+          <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-8">
+            <Image
+              src={siteImages.aboutBW}
+              alt="David Rodas"
+              fill
+              className="object-cover"
+              sizes="128px"
+            />
+          </div>
+          <p className="font-serif italic text-xl md:text-2xl text-paper/80 leading-relaxed mb-6">
+            Desde las orillas del Lago de Atitlán, construyendo con las manos y con la mente.
+          </p>
+          <Link
+            href="/about"
+            className="font-mono text-xs uppercase tracking-widest text-grey hover:text-paper transition-colors"
+          >
+            Sobre mí →
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

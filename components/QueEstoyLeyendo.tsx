@@ -3,7 +3,7 @@ import readings from "@/content/readings.json";
 
 export default function QueEstoyLeyendo() {
   return (
-    <section className="py-16 px-6 md:px-12 bg-paper border-t border-grey/20">
+    <section className="py-16 px-6 md:px-12 bg-surface border-t border-grey/20">
       <div className="max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {readings.map((book, i) => (

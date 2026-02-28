@@ -131,7 +131,7 @@ export default function PuzzlesJuegos() {
   }, [updateActiveIndex]);
 
   return (
-    <section className="py-16 px-6 md:px-12 bg-surface border-t border-grey/20">
+    <section className="py-16 px-6 md:px-12 bg-paper border-t border-grey/20">
       <div
         ref={scrollRef}
         className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide max-w-5xl mx-auto"
