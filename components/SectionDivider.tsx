@@ -8,20 +8,20 @@ interface SectionDividerProps {
 
 export default function SectionDivider({ image, title, subtitle }: SectionDividerProps) {
   return (
-    <section className="pt-6 pb-4 flex flex-col items-center px-6">
-      <div className="w-[60%] h-px bg-grey/20 mb-4" />
+    <section className="pt-8 pb-2 flex flex-col items-center px-6">
+      <div className="w-[60%] h-px bg-grey/20 mb-6" />
 
-      <div className="relative w-[90%] max-w-[500px] aspect-[16/7]">
+      <div className="relative w-full max-w-[650px] aspect-[16/5]">
         <Image
           src={image}
-          alt={title}
+          alt=""
           fill
           className="object-contain"
-          sizes="(max-width: 768px) 90vw, 500px"
+          sizes="(max-width: 768px) 90vw, 650px"
         />
       </div>
 
-      <h2 className="font-serif text-sm md:text-base uppercase tracking-[0.2em] text-ink mt-2">
+      <h2 className="font-serif text-4xl md:text-5xl font-bold text-ink text-center -mt-4 md:-mt-6 relative z-10">
         {title}
       </h2>
       {subtitle && (
@@ -30,7 +30,7 @@ export default function SectionDivider({ image, title, subtitle }: SectionDivide
         </p>
       )}
 
-      <div className="w-[60%] h-px bg-grey/20 mt-3" />
+      <div className="w-[60%] h-px bg-grey/20 mt-4" />
     </section>
   );
 }

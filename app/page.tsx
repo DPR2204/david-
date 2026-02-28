@@ -230,15 +230,15 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Block 8: Qué estoy leyendo */}
-      <QueEstoyLeyendo />
-
       {/* Block 8: Section divider — Qué estoy leyendo */}
       <SectionDivider
         image="/illustrations/divider-libros.png"
         title="Qué estoy leyendo"
         subtitle="Libros, artículos e ideas en mi radar"
       />
+
+      {/* Block 9: Qué estoy leyendo */}
+      <QueEstoyLeyendo />
 
       {/* Block 9: Bloque "Ahora" */}
       <section className="py-16 px-6 md:px-12 bg-surface">
@@ -281,15 +281,15 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Block 10: Puzzles & Juegos */}
-      <PuzzlesJuegos />
-
       {/* Block 11: Section divider — Puzzles & Juegos */}
       <SectionDivider
         image="/illustrations/divider-juegos.png"
         title="Puzzles & Juegos"
         subtitle="Tomate un descanso y jugá"
       />
+
+      {/* Block 12: Puzzles & Juegos */}
+      <PuzzlesJuegos />
     </div>
   );
 }

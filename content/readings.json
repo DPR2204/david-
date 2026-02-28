@@ -3,21 +3,21 @@
     "title": "Dune",
     "author": "Frank Herbert",
     "type": "libro",
-    "cover": "https://covers.openlibrary.org/b/isbn/9780441013593-L.jpg",
-    "note": "La política del desierto como espejo de la política del agua en Atitlán."
+    "cover": "/images/books/dune.png",
+    "note": "Épica de ciencia ficción sobre poder, religión y ecología en un planeta desértico donde la especia más valiosa del universo dicta el destino de imperios."
   },
   {
     "title": "Foundation",
     "author": "Isaac Asimov",
     "type": "libro",
-    "cover": "https://covers.openlibrary.org/b/isbn/9780553293357-L.jpg",
-    "note": "Psicohistoria aplicada a la dirección de un ecosistema familiar."
+    "cover": "/images/books/foundation.png",
+    "note": "El colapso de un imperio galáctico y el audaz plan de un matemático para preservar el conocimiento humano a través de milenios de oscuridad."
   },
   {
-    "title": "The Hard Thing About Hard Things",
-    "author": "Ben Horowitz",
+    "title": "Historia de O",
+    "author": "Pauline Réage",
     "type": "libro",
-    "cover": "https://covers.openlibrary.org/b/isbn/9780062273208-L.jpg",
-    "note": "Construir un negocio cuando no hay manual."
+    "cover": "/images/books/historia-de-o.png",
+    "note": "Novela erótica francesa que explora los límites del deseo, la sumisión voluntaria y la libertad a través de la entrega absoluta."
   }
 ]
