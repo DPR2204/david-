@@ -77,48 +77,57 @@ export default function HomePage() {
             <div className="h-[2px] bg-ink mt-4" />
           </div>
 
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-            {ventures.map((v, i) => (
-              <Link
-                key={v.slug}
-                href={`/ventures/${v.slug}`}
-                className={`
-                  relative overflow-hidden rounded-sm group cursor-pointer
-                  ${i === 0 || i === 4 ? "col-span-2 md:col-span-2 aspect-[16/9]" : "col-span-1 aspect-[4/5]"}
-                `}
-              >
-                {v.image ? (
-                  <Image
-                    src={v.image}
-                    alt={v.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    sizes={i === 0 || i === 4 ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 50vw, 33vw"}
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-ink">
-                    <div
-                      className="absolute inset-0 pointer-events-none opacity-[0.03]"
-                      style={{
-                        backgroundImage:
-                          "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 4px)",
-                      }}
+          <div
+            className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
+            style={{ gridTemplateRows: "repeat(2, 200px) 280px", gridAutoRows: "280px" }}
+          >
+            {ventures.map((v, i) => {
+              const isHero = i === 0;
+              const isStacked = i === 1 || i === 2;
+              return (
+                <Link
+                  key={v.slug}
+                  href={`/ventures/${v.slug}`}
+                  className={`
+                    relative overflow-hidden rounded-sm group cursor-pointer
+                    ${isHero ? "col-span-2 md:col-span-2 md:row-span-2" : ""}
+                    ${isStacked ? "col-span-1" : ""}
+                    ${!isHero && !isStacked ? "col-span-1" : ""}
+                  `}
+                >
+                  {v.image ? (
+                    <Image
+                      src={v.image}
+                      alt={v.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      sizes={isHero ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 50vw, 33vw"}
                     />
+                  ) : (
+                    <div className="absolute inset-0 bg-ink">
+                      <div
+                        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+                        style={{
+                          backgroundImage:
+                            "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 4px)",
+                        }}
+                      />
+                    </div>
+                  )}
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                  <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                    <span className="font-mono text-[0.5rem] md:text-[0.55rem] uppercase tracking-wider text-paper/60 block mb-1">
+                      {v.tag}
+                    </span>
+                    <h3 className="font-serif text-lg md:text-2xl font-bold text-paper leading-tight">
+                      {v.name}
+                    </h3>
                   </div>
-                )}
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-                  <span className="font-mono text-[0.5rem] md:text-[0.55rem] uppercase tracking-wider text-paper/60 block mb-1">
-                    {v.tag}
-                  </span>
-                  <h3 className="font-serif text-lg md:text-2xl font-bold text-paper leading-tight">
-                    {v.name}
-                  </h3>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </ScrollReveal>
       </section>
