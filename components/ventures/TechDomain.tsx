@@ -11,11 +11,11 @@ export default function TechDomain({ domain }: { domain: Domain }) {
       {/* Header */}
       <ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 md:gap-8 mb-6">
-          <span className="font-serif text-[5rem] md:text-[6rem] font-bold leading-none text-ink/[0.06] select-none">
+          <span className="font-serif text-[5rem] md:text-[6rem] font-normal leading-none text-ink/[0.06] select-none">
             {domain.number}
           </span>
           <div>
-            <h2 className="font-serif text-xl md:text-2xl font-bold text-ink mb-2">
+            <h2 className="font-serif text-xl md:text-2xl font-normal text-ink mb-2">
               {domain.title}
             </h2>
             <p className="font-body text-sm md:text-base text-grey leading-relaxed max-w-xl">
@@ -61,7 +61,7 @@ export default function TechDomain({ domain }: { domain: Domain }) {
                 </span>
               </div>
               <div>
-                <p className="font-body text-sm font-medium">{sys.name}</p>
+                <p className="font-body text-sm font-bold">{sys.name}</p>
                 <p className="font-mono text-[0.5rem] text-grey">{sys.description}</p>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function TechDomain({ domain }: { domain: Domain }) {
               <p className="font-mono text-[0.5rem] uppercase tracking-wider text-red mb-2">
                 {item.label}
               </p>
-              <p className="font-body text-sm font-medium mb-1">{item.name}</p>
+              <p className="font-body text-sm font-bold mb-1">{item.name}</p>
               <p className="font-mono text-[0.5rem] text-grey leading-relaxed">
                 {item.description}
               </p>

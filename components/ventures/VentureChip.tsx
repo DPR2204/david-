@@ -34,7 +34,7 @@ export default function VentureChip({ venture }: { venture: Venture }) {
         <p className="font-mono text-[0.4rem] uppercase tracking-wider text-paper/50">
           {venture.type}
         </p>
-        <h4 className="font-serif text-lg font-bold text-paper leading-tight">
+        <h4 className="font-serif text-lg font-normal text-paper leading-tight">
           {venture.name}
         </h4>
         <p className="font-mono text-[0.5rem] text-paper/40 mt-1">

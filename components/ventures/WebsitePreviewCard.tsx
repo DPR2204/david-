@@ -24,7 +24,7 @@ export default function WebsitePreviewCard({ site }: { site: WebsitePreview }) {
           className="absolute top-0 left-0 right-0 h-[3px]"
           style={{ backgroundColor: site.accentColor }}
         />
-        <p className="font-serif text-base font-bold text-center">
+        <p className="font-serif text-base font-normal text-center">
           {site.name}
         </p>
         <p className="font-mono text-[0.45rem] uppercase tracking-wider text-grey text-center mt-1">

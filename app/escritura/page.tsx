@@ -32,7 +32,7 @@ export default function EscrituraPage() {
                   />
                 ) : (
                   <div className="absolute inset-0 bg-ink flex items-center justify-center">
-                    <h2 className="font-serif text-3xl font-bold text-paper text-center px-8">
+                    <h2 className="font-serif text-3xl font-normal text-paper text-center px-8">
                       {featured.title}
                     </h2>
                   </div>
@@ -42,7 +42,7 @@ export default function EscrituraPage() {
 
             <div className="flex flex-col justify-center">
               <SectionLabel>{featured.status || "Obra en progreso"}</SectionLabel>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-ink mt-3 mb-3 leading-tight">
+              <h2 className="font-serif text-2xl md:text-3xl font-normal text-ink mt-3 mb-3 leading-tight">
                 <Link href={`/escritura/${featured.slug}`} className="hover:text-red transition-colors">
                   {featured.title}
                 </Link>
@@ -96,7 +96,7 @@ export default function EscrituraPage() {
                   <span className="font-mono text-sm text-grey/40">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="font-serif text-lg md:text-xl font-medium text-ink group-hover:text-red transition-colors leading-tight truncate">
+                  <h3 className="font-serif text-lg md:text-xl font-normal text-ink group-hover:text-red transition-colors leading-tight truncate">
                     {post.title}
                   </h3>
                 </div>

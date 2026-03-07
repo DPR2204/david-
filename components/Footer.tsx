@@ -14,7 +14,7 @@ export default function Footer() {
     <footer className="bg-ink">
       <div className="max-w-6xl mx-auto px-5 py-12">
         {/* Logo */}
-        <p className="font-serif text-lg font-bold text-paper mb-6">David Rodas</p>
+        <p className="font-serif text-lg font-normal text-paper mb-6">David Rodas</p>
 
         {/* Coordinates */}
         <p className="font-mono text-xs text-grey/40 mb-8">

@@ -171,7 +171,7 @@ export default function WordlePage() {
           &larr; Volver
         </Link>
 
-        <h1 className="font-serif text-3xl md:text-4xl font-bold text-center mb-2">
+        <h1 className="font-serif text-3xl md:text-4xl font-normal text-center mb-2">
           Wordle del Lago
         </h1>
         <p className="font-body text-base text-grey text-center mb-8">
@@ -232,7 +232,7 @@ export default function WordlePage() {
         {/* Game over message */}
         {gameOver && (
           <div className="text-center mb-6">
-            <p className="font-serif text-xl font-bold mb-2">
+            <p className="font-serif text-xl font-normal mb-2">
               {won
                 ? `Excelente! En ${guesses.length} intento${guesses.length > 1 ? "s" : ""}.`
                 : `La palabra era: ${answer}`}

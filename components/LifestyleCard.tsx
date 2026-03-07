@@ -31,7 +31,7 @@ export default function LifestyleCard({ post, size = "medium" }: LifestyleCardPr
         <span className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-red mb-2 block">
           {post.category}
         </span>
-        <h3 className={`font-serif font-bold text-white leading-tight ${size === "large" ? "text-2xl md:text-3xl" : "text-lg md:text-xl"}`}>
+        <h3 className={`font-serif font-normal text-white leading-tight ${size === "large" ? "text-2xl md:text-3xl" : "text-lg md:text-xl"}`}>
           {post.title}
         </h3>
       </div>

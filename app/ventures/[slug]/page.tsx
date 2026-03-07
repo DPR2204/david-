@@ -54,7 +54,7 @@ export default async function VentureDetailPage({ params }: Props) {
               {venture.status}
             </span>
           </div>
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-ink leading-tight mb-4">
+          <h1 className="font-serif text-3xl md:text-5xl font-normal text-ink leading-tight mb-4">
             {venture.name}
           </h1>
           <div className="w-12 h-[3px] bg-red" />

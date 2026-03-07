@@ -206,7 +206,7 @@ export default function CrucigramaPage() {
           &larr; Volver
         </Link>
 
-        <h1 className="font-serif text-3xl md:text-4xl font-bold text-center mb-2">
+        <h1 className="font-serif text-3xl md:text-4xl font-normal text-center mb-2">
           Crucigrama
         </h1>
         <p className="font-body text-base text-grey text-center mb-2">
@@ -278,7 +278,7 @@ export default function CrucigramaPage() {
           {/* Clues */}
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
             <div>
-              <h3 className="font-serif text-lg font-bold mb-3">Horizontal</h3>
+              <h3 className="font-serif text-lg font-normal mb-3">Horizontal</h3>
               {acrossClues.map((w) => (
                 <p key={`a-${w.number}`} className="font-body text-grey mb-2">
                   <strong className="text-ink">{w.number}.</strong> {w.clue}
@@ -286,7 +286,7 @@ export default function CrucigramaPage() {
               ))}
             </div>
             <div>
-              <h3 className="font-serif text-lg font-bold mb-3">Vertical</h3>
+              <h3 className="font-serif text-lg font-normal mb-3">Vertical</h3>
               {downClues.map((w) => (
                 <p key={`d-${w.number}`} className="font-body text-grey mb-2">
                   <strong className="text-ink">{w.number}.</strong> {w.clue}

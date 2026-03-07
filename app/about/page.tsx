@@ -118,7 +118,7 @@ export default function AboutPage() {
         <ScrollReveal>
           <SectionLabel>Sobre mí</SectionLabel>
           <div className="h-[2px] bg-ink mt-4 mb-10" />
-          <blockquote className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] italic text-ink leading-[1.3]">
+          <blockquote className="font-body text-3xl md:text-4xl lg:text-[2.75rem] italic text-ink leading-[1.3]">
             &ldquo;La Tierra no necesita más ciudadanos de naciones. Necesita habitantes
             conscientes de un planeta.&rdquo;
           </blockquote>
@@ -246,7 +246,7 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   {group.items.map((item, i) => (
                     <div key={i} className="pl-4 border-l-2 border-ink/10">
-                      <p className="font-body text-base font-medium text-ink">{item.title}</p>
+                      <p className="font-body text-base font-bold text-ink">{item.title}</p>
                       {item.detail && (
                         <p className="font-body text-sm text-grey mt-0.5">{item.detail}</p>
                       )}
@@ -284,7 +284,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap gap-6">
             {idiomas.map((item) => (
               <div key={item.lang}>
-                <p className="font-body text-base font-medium text-ink">{item.lang}</p>
+                <p className="font-body text-base font-bold text-ink">{item.lang}</p>
                 <p className="font-mono text-xs text-grey uppercase tracking-wider">{item.level}</p>
               </div>
             ))}
@@ -299,13 +299,13 @@ export default function AboutPage() {
           <div className="h-[2px] bg-ink mt-4 mb-6" />
           <div className="space-y-4">
             <div className="pl-4 border-l-2 border-ink/10">
-              <p className="font-body text-base font-medium text-ink">Vicepresidente</p>
+              <p className="font-body text-base font-bold text-ink">Vicepresidente</p>
               <p className="font-body text-sm text-grey mt-0.5">
                 Asociación de Restaurantes y Comedores de Panajachel
               </p>
             </div>
             <div className="pl-4 border-l-2 border-ink/10">
-              <p className="font-body text-base font-medium text-ink">Miembro del Consejo</p>
+              <p className="font-body text-base font-bold text-ink">Miembro del Consejo</p>
               <p className="font-body text-sm text-grey mt-0.5">
                 Ecosistema de negocios familiar
               </p>

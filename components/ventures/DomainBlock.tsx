@@ -13,12 +13,12 @@ export default function DomainBlock({ domain }: { domain: Domain }) {
       <ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 md:gap-8 mb-6">
           {/* Faded number */}
-          <span className="font-serif text-[5rem] md:text-[6rem] font-bold leading-none text-ink/[0.06] select-none">
+          <span className="font-serif text-[5rem] md:text-[6rem] font-normal leading-none text-ink/[0.06] select-none">
             {domain.number}
           </span>
 
           <div>
-            <h2 className="font-serif text-xl md:text-2xl font-bold text-ink mb-2">
+            <h2 className="font-serif text-xl md:text-2xl font-normal text-ink mb-2">
               {domain.title}
             </h2>
             <p className="font-body text-sm md:text-base text-grey leading-relaxed max-w-xl">

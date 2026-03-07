@@ -56,7 +56,7 @@ export default async function LifestyleArticlePage({ params }: Props) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           <div className="absolute bottom-8 left-0 right-0 max-w-3xl mx-auto px-5">
             <SectionLabel>{meta.category}</SectionLabel>
-            <h1 className="font-serif text-3xl md:text-5xl font-bold text-white mt-2 leading-tight">
+            <h1 className="font-serif text-3xl md:text-5xl font-normal text-white mt-2 leading-tight">
               {meta.title}
             </h1>
           </div>
@@ -67,7 +67,7 @@ export default async function LifestyleArticlePage({ params }: Props) {
         {!meta.image && (
           <header className="mb-8">
             <SectionLabel>{meta.category}</SectionLabel>
-            <h1 className="font-serif text-3xl md:text-5xl font-bold text-ink mt-3 mb-4 leading-tight">
+            <h1 className="font-serif text-3xl md:text-5xl font-normal text-ink mt-3 mb-4 leading-tight">
               {meta.title}
             </h1>
           </header>

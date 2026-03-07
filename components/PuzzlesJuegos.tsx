@@ -148,7 +148,7 @@ export default function PuzzlesJuegos() {
                 <div className="w-20 h-20 mb-4">
                   <Icon />
                 </div>
-                <h3 className="font-serif text-xl font-bold mb-2">
+                <h3 className="font-serif text-xl font-normal mb-2">
                   {game.title}
                 </h3>
                 <p className="font-body text-sm text-grey mb-4">

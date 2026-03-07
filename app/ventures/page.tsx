@@ -20,7 +20,7 @@ export default function VenturesPage() {
       <ScrollReveal>
         <SectionLabel>Ventures &amp; Habilidades</SectionLabel>
         <div className="h-[2px] bg-ink mt-4 mb-8" />
-        <h1 className="font-serif text-3xl md:text-5xl font-bold text-ink leading-tight max-w-2xl mb-6">
+        <h1 className="font-serif text-3xl md:text-5xl font-normal text-ink leading-tight max-w-2xl mb-6">
           Construyo ecosistemas.
           <br />
           No solo <em className="italic text-red">negocios</em>.
@@ -49,7 +49,7 @@ export default function VenturesPage() {
       {/* ── Closing ── */}
       <ScrollReveal>
         <div className="bg-ink py-12 md:py-16 px-6 mt-12 text-center">
-          <p className="font-serif italic text-xl md:text-2xl text-paper/70 leading-relaxed max-w-md mx-auto mb-4">
+          <p className="font-body italic text-xl md:text-2xl text-paper/70 leading-relaxed max-w-md mx-auto mb-4">
             Desde las orillas del Lago de Atitlán, construyendo con las manos y
             con la mente.
           </p>

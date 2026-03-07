@@ -20,7 +20,7 @@ export default function VentureCard({ venture, index }: VentureCardProps) {
           {venture.tag}
         </span>
       </div>
-      <h3 className="font-serif text-xl md:text-2xl font-bold flex items-center gap-2 mb-2">
+      <h3 className="font-serif text-xl md:text-2xl font-normal flex items-center gap-2 mb-2">
         <span className="text-ink group-hover:text-red transition-colors">{venture.name}</span>
         <span className="text-base text-grey/40 group-hover:text-red group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
           {"\u2197\uFE0E"}
