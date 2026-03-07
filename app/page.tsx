@@ -37,11 +37,11 @@ export default function HomePage() {
           </span>
 
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal text-paper leading-[0.95] mb-6">
-            Construyendo<br />desde el lago.
+            Pensar<br />es hacer.
           </h1>
 
           <p className="font-body text-lg md:text-xl text-paper/70 max-w-lg leading-relaxed">
-            Un ecosistema de proyectos, pensamiento y escritura desde las orillas del Lago de Atitlán.
+            Un espacio editorial para pensar en voz alta.
           </p>
 
           <div className="w-12 h-[3px] bg-red mt-6" />
