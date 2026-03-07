@@ -66,7 +66,7 @@ export default function VisualPage() {
       <ScrollReveal>
         <SectionLabel>Visual</SectionLabel>
         <div className="h-[2px] bg-ink mt-4 mb-4" />
-        <h1 className="font-serif text-3xl md:text-5xl font-bold text-ink leading-tight mb-6">
+        <h1 className="font-serif text-3xl md:text-5xl font-normal text-ink leading-tight mb-6">
           Desde el lago
         </h1>
       </ScrollReveal>
@@ -104,7 +104,7 @@ export default function VisualPage() {
               }}
             />
             <div className="relative text-center px-8">
-              <h2 className="font-serif text-2xl md:text-4xl font-bold text-paper mb-4">
+              <h2 className="font-serif text-2xl md:text-4xl font-normal text-paper mb-4">
                 Narrativas del lago
               </h2>
               <p className="font-body text-base text-white/70 max-w-lg mx-auto">

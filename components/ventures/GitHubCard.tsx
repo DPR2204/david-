@@ -33,7 +33,7 @@ export default function GitHubCard({
 
       {/* Stats */}
       <div className="shrink-0 text-center">
-        <p className="font-serif text-xl font-bold text-paper leading-none">
+        <p className="font-serif text-xl font-normal text-paper leading-none">
           {repos}
         </p>
         <p className="font-mono text-[0.45rem] uppercase tracking-wider text-paper/40 mt-0.5">

@@ -54,7 +54,7 @@ export default function Masthead() {
         <div className="w-10" />
         <Link
           href="/"
-          className={`font-serif text-xl font-bold tracking-tight transition-colors duration-300 ${
+          className={`font-serif text-xl font-normal tracking-tight transition-colors duration-300 ${
             transparent ? "text-paper" : "text-ink"
           }`}
         >

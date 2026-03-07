@@ -22,7 +22,7 @@ export default function QueEstoyLeyendo() {
                     <span className="font-mono text-[0.5rem] uppercase tracking-[0.2em] text-red mb-3">
                       {book.type}
                     </span>
-                    <h4 className="font-serif text-xl md:text-2xl font-bold text-paper text-center leading-tight">
+                    <h4 className="font-serif text-xl md:text-2xl font-normal text-paper text-center leading-tight">
                       {book.title}
                     </h4>
                     <p className="font-mono text-[0.6rem] uppercase tracking-wider text-paper/40 mt-3">
@@ -34,7 +34,7 @@ export default function QueEstoyLeyendo() {
               <span className="font-mono text-[0.55rem] uppercase tracking-wider text-red block mb-1">
                 {book.type}
               </span>
-              <h3 className="font-serif text-lg font-bold leading-snug mb-1">
+              <h3 className="font-serif text-lg font-normal leading-snug mb-1">
                 {book.title}
               </h3>
               <p className="font-body text-sm text-grey">{book.author}</p>

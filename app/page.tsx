@@ -36,7 +36,7 @@ export default function HomePage() {
             Lake Atitlán &middot; 14&deg;44&apos;N 91&deg;12&apos;W &middot; Desde 1960
           </span>
 
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[0.95] mb-6">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal text-paper leading-[0.95] mb-6">
             Construyendo<br />desde el lago.
           </h1>
 
@@ -52,7 +52,7 @@ export default function HomePage() {
       <section className="py-20 md:py-28 px-6 md:px-12 bg-paper">
         <ScrollReveal>
           <blockquote className="max-w-6xl mx-auto">
-            <p className="font-serif italic text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-ink text-center">
+            <p className="font-body italic text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-ink text-center">
               &ldquo;La Tierra no necesita más ciudadanos de naciones. Necesita habitantes conscientes de un planeta.&rdquo;
             </p>
             <cite className="block text-center mt-6 font-mono text-xs uppercase tracking-[0.2em] text-grey not-italic">
@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto mb-10">
             <SectionLabel>Ventures</SectionLabel>
             <div className="flex items-baseline justify-between mt-2">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold">El ecosistema</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-normal">El ecosistema</h2>
               <Link
                 href="/ventures"
                 className="font-mono text-xs uppercase tracking-wider text-grey hover:text-red transition-colors"
@@ -126,7 +126,7 @@ export default function HomePage() {
                     <span className="font-mono text-[0.5rem] md:text-[0.55rem] uppercase tracking-wider text-paper/60 block mb-1">
                       {v.tag}
                     </span>
-                    <h3 className="font-serif text-lg md:text-2xl font-bold text-paper leading-tight">
+                    <h3 className="font-serif text-lg md:text-2xl font-normal text-paper leading-tight">
                       {v.name}
                     </h3>
                   </div>
@@ -181,7 +181,7 @@ export default function HomePage() {
                   <span className="font-mono text-[0.55rem] uppercase tracking-widest text-red">
                     {post.category.toUpperCase()}
                   </span>
-                  <h3 className="font-serif text-xl font-bold text-ink mt-1 mb-2 group-hover:text-red transition-colors">
+                  <h3 className="font-serif text-xl font-normal text-ink mt-1 mb-2 group-hover:text-red transition-colors">
                     {post.title}
                   </h3>
                   <p className="font-body text-sm text-grey leading-relaxed">
@@ -259,33 +259,33 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row gap-8 md:gap-16">
               <div className="shrink-0">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-red block mb-2">Ahora</span>
-                <p className="font-serif text-4xl md:text-5xl font-bold text-ink leading-none">Febrero</p>
-                <p className="font-serif text-4xl md:text-5xl font-light text-grey/40 leading-none">2026</p>
+                <p className="font-serif text-4xl md:text-5xl font-normal text-ink leading-none">Febrero</p>
+                <p className="font-serif text-4xl md:text-5xl font-normal text-grey/40 leading-none">2026</p>
               </div>
 
               <div className="flex-1">
                 <div className="h-[2px] bg-ink mb-8 md:mt-2" />
                 <div className="grid grid-cols-1 gap-y-5">
                   <div className="flex items-start gap-4">
-                    <span className="font-serif text-2xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
+                    <span className="font-serif text-2xl font-normal text-red/30 leading-none mt-0.5">&rarr;</span>
                     <p className="font-body text-base text-ink">
                       Abriendo <strong>Pan Nuestro</strong> — la panadería artesanal en Atitlán
                     </p>
                   </div>
                   <div className="flex items-start gap-4">
-                    <span className="font-serif text-2xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
+                    <span className="font-serif text-2xl font-normal text-red/30 leading-none mt-0.5">&rarr;</span>
                     <p className="font-body text-base text-ink">
                       Escribiendo el <strong>Manifiesto Terrícola</strong>
                     </p>
                   </div>
                   <div className="flex items-start gap-4">
-                    <span className="font-serif text-2xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
+                    <span className="font-serif text-2xl font-normal text-red/30 leading-none mt-0.5">&rarr;</span>
                     <p className="font-body text-base text-ink">
                       Diseñando la <strong>carta de cócteles</strong> para la temporada
                     </p>
                   </div>
                   <div className="flex items-start gap-4">
-                    <span className="font-serif text-2xl font-light text-red/30 leading-none mt-0.5">&rarr;</span>
+                    <span className="font-serif text-2xl font-normal text-red/30 leading-none mt-0.5">&rarr;</span>
                     <p className="font-body text-base text-ink">
                       Construyendo sistemas de <strong>automatización</strong> con IA
                     </p>
@@ -319,7 +319,7 @@ export default function HomePage() {
               sizes="128px"
             />
           </div>
-          <p className="font-serif italic text-xl md:text-2xl text-paper/80 leading-relaxed mb-6">
+          <p className="font-body italic text-xl md:text-2xl text-paper/80 leading-relaxed mb-6">
             Desde las orillas del Lago de Atitlán, construyendo con las manos y con la mente.
           </p>
           <Link

@@ -72,7 +72,7 @@ export default async function EscrituraArticlePage({ params }: Props) {
           </Link>
         </div>
         <SectionLabel>{meta.category}</SectionLabel>
-        <h1 className="font-serif text-3xl md:text-5xl font-bold text-ink mt-3 mb-4 leading-tight">
+        <h1 className="font-serif text-3xl md:text-5xl font-normal text-ink mt-3 mb-4 leading-tight">
           {meta.title}
         </h1>
         <p className="font-mono text-xs text-red uppercase tracking-[0.2em]">

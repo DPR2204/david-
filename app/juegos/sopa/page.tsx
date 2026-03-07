@@ -296,7 +296,7 @@ export default function SopaPage() {
           &larr; Volver
         </Link>
 
-        <h1 className="font-serif text-3xl md:text-4xl font-bold text-center mb-2">
+        <h1 className="font-serif text-3xl md:text-4xl font-normal text-center mb-2">
           Sopa de Letras
         </h1>
         <p className="font-body text-base text-grey text-center mb-2">
@@ -376,7 +376,7 @@ export default function SopaPage() {
         </div>
 
         {allFound && (
-          <p className="font-serif text-xl font-bold text-center">
+          <p className="font-serif text-xl font-normal text-center">
             Felicidades! Encontraste todas las palabras.
           </p>
         )}

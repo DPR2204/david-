@@ -149,7 +149,7 @@ export default function ElMixCarousel() {
                     <span className="relative font-mono text-[0.5rem] uppercase tracking-[0.2em] text-red mb-2">
                       {item.tag}
                     </span>
-                    <h4 className="relative font-serif text-xl font-bold text-paper text-center leading-tight">
+                    <h4 className="relative font-serif text-xl font-normal text-paper text-center leading-tight">
                       {item.title}
                     </h4>
                   </div>

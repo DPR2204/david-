@@ -172,7 +172,7 @@ export default function TotitoPage() {
           &larr; Volver
         </Link>
 
-        <h1 className="font-serif text-3xl md:text-4xl font-bold text-center mb-2">
+        <h1 className="font-serif text-3xl md:text-4xl font-normal text-center mb-2">
           Totito
         </h1>
         <p className="font-body text-base text-grey text-center mb-8">
@@ -212,7 +212,7 @@ export default function TotitoPage() {
                   onClick={() => handleClick(i)}
                   className={`
                     aspect-square flex items-center justify-center
-                    text-4xl md:text-5xl font-serif font-bold
+                    text-4xl md:text-5xl font-serif font-normal
                     transition-all duration-200
                     ${col < 2 ? "border-r-2 border-ink/20" : ""}
                     ${row < 2 ? "border-b-2 border-ink/20" : ""}
@@ -237,12 +237,12 @@ export default function TotitoPage() {
         {/* Status */}
         <div className="text-center mb-6">
           {winner && (
-            <p className="font-serif text-xl font-bold">
+            <p className="font-serif text-xl font-normal">
               {winner === "X" ? "Ganaste!" : "La máquina ganó."}
             </p>
           )}
           {isDraw && (
-            <p className="font-serif text-xl font-bold">Empate!</p>
+            <p className="font-serif text-xl font-normal">Empate!</p>
           )}
           {gameOver && (
             <button

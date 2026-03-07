@@ -21,7 +21,7 @@ export default function SectionDivider({ image, title, subtitle }: SectionDivide
         />
       </div>
 
-      <h2 className="font-serif text-4xl md:text-5xl font-bold text-ink text-center -mt-4 md:-mt-6 relative z-10">
+      <h2 className="font-serif text-4xl md:text-5xl font-normal text-ink text-center -mt-4 md:-mt-6 relative z-10">
         {title}
       </h2>
       {subtitle && (

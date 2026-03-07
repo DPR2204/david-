@@ -7,9 +7,9 @@
   --color-red: #C53A2A;
   --color-grey: #8A8578;
 
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-body: 'Source Serif 4', Georgia, serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-serif: 'Libre Caslon Display', Georgia, serif;
+  --font-body: 'Libre Caslon Text', Georgia, serif;
+  --font-mono: 'Courier Prime', 'Courier New', monospace;
 }
 
 body {
@@ -49,13 +49,13 @@ body {
 
 /* Drop cap styling */
 .drop-cap::first-letter {
-  font-family: 'Playfair Display', serif;
-  font-size: 4.5rem;
+  font-family: 'Libre Caslon Display', Georgia, serif;
+  font-size: 5rem;
   float: left;
-  line-height: 0.8;
-  padding-right: 0.5rem;
-  padding-top: 0.15rem;
-  font-weight: 700;
+  line-height: 0.75;
+  padding-right: 0.6rem;
+  padding-top: 0.1rem;
+  font-weight: 400;
   color: #C53A2A;
 }
 
@@ -72,7 +72,7 @@ body {
 .prose h2 {
   font-family: var(--font-serif);
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   color: var(--color-ink);
@@ -81,7 +81,7 @@ body {
 .prose h3 {
   font-family: var(--font-serif);
   font-size: 1.35rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   color: var(--color-ink);
@@ -90,7 +90,8 @@ body {
 .prose p {
   font-family: var(--font-body);
   font-size: 1.125rem;
-  line-height: 1.8;
+  line-height: 1.85;
+  letter-spacing: 0.005em;
   margin-bottom: 1.25rem;
   color: var(--color-ink);
 }
@@ -111,12 +112,13 @@ body {
 .prose li {
   font-family: var(--font-body);
   font-size: 1.125rem;
-  line-height: 1.8;
+  line-height: 1.85;
+  letter-spacing: 0.005em;
   margin-bottom: 0.5rem;
 }
 
 .prose strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .prose em {
